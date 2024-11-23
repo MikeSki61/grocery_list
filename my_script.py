@@ -194,9 +194,77 @@ print(set_a.union(set_b)) """
 
 
 # Difference
-set_x = {'cat', 'dog', 'fish'} 
+""" set_x = {'cat', 'dog', 'fish'} 
 set_y = {'dog', 'bird'}
-print(set_x.difference(set_y))
+print(set_x.diff(set_y)) """
+
+
+
+# Day 3 Assignment
+
+# Exercise 1: Creating a Grocery List with Tuples
+grapes = ("grapes", 1.00, 10)
+apples = ("apples", 2.00, 5)
+pears = ("pears", 1.50, 2)
+
+grocery_list = []
+grocery_list.append(grapes)
+grocery_list.append(apples)
+grocery_list.append(pears)
+print(grocery_list)
+
+total_cost_grapes = 1.00 * 10
+print(f'Total cost of grapes: ${total_cost_grapes: }')
+total_cost_apples = 2.00 * 5
+print(f'Total cost of apples: ${total_cost_apples: }')
+total_cost_pears = 1.50 * 2
+print(f'Total cost of pears: ${total_cost_pears: }')
+
+# Exercise 2: Working with Dictionaries
+
+apple_dict = {'name': 'apple', 'price': .90, 'quantity': 10}
+lettuce_dict = {'name': 'lettuce', 'price': 1.99, 'quantity': 20}
+bagel_dict = {'name': 'bagel', 'price': 2.25, 'quantity': 20}
+
+apple_dict['total_cost'] = apple_dict['price'] * apple_dict['quantity']
+print(f'The total cost of the apples: ${apple_dict['total_cost']:}')
+
+lettuce_dict['total_cost'] = lettuce_dict['price'] * lettuce_dict['quantity']
+print(f'The total cost of lettuce: ${lettuce_dict['total_cost']:}')
+
+bagel_dict['total_cost'] = bagel_dict['price'] * bagel_dict['quantity']
+print(f'The total cost of bagels: ${bagel_dict['total_cost']:}')
+
+# Exercise 3: Slicing and Sorting a List
+num_list = [16, 47, 1, 3, 5, 9, 15, 2]
+print(num_list[2:])
+print(num_list[:4])
+print(num_list[-3])
+num_list.sort(reverse=True)
+print(num_list)
+print(len(num_list))
+
+#Exercise 4: Sets Operations
+dairy_products = {'milk', 'butter', 'cream', 'yogurt', 'cheese'}
+desserts = {'jello', 'chocolate', 'candy', 'cookies', 'muffins'}
+
+dairy_products.add('ice_cream')
+print(dairy_products)
+
+desserts.add('ice_cream')
+print(desserts)
+
+dairy_products.remove('milk')
+print(dairy_products)
+
+desserts.remove('jello')
+print(desserts)
+
+print(dairy_products.intersection(desserts))
+
+
+
+
 
 
 
