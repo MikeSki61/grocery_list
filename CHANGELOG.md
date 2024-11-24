@@ -7,3 +7,6 @@
 ## [0.2.0] -2024-11-23
 ### Added
 - exercises for tuples, dictionaries, sets, and slicing lists.
+
+## [0.3.0] -2024-11-24
+### exercises in for and while loops
