@@ -245,9 +245,9 @@ else:
         print(“I satisfy the nested conditional”)  """
         
 # Full Example
-weather = "sunny"
+""" weather = "sunny"
 temperature = 75
-
+"""
 
 # conditional 1: Check if the weather is sunny or not
 """ if weather == "sunny":
@@ -346,7 +346,7 @@ for i in grocery_list:
     print(i) """
     
 # While Loop with User Input: Write a program that lets the user add items to a grocery list # until they type "done."
-grocery_list = ["fruits", "bread", "soda", "milk"]
+""" grocery_list = ["fruits", "bread", "soda", "milk"]
 while True:
     user_input = input("Type a command add or done: ")
     if user_input == "done":
@@ -375,7 +375,7 @@ grocery_list = {'apples': {'price': 1.50, 'quantity': 4},'bread': {'price': 2.50
 'quantity': 2}}
 for item, details in grocery_list.items():
      total_cost = details['price'] * details['quantity']
-print(f'{item}: ${total_cost: }')
+print(f'{item}: ${total_cost: }') """
     
 
 
