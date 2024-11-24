@@ -444,8 +444,6 @@ for item, details in grocery_list.items():
 print(f'{item}: ${total_cost: }')   """
 
 
-grocery_list = ["milk", "bread", "eggs", "cheese","bananas"]
-item_to_find = "cheese"
 
 
 
