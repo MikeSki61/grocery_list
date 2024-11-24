@@ -1,4 +1,4 @@
-# Day 3 Practice Exercises
+""" """ # Day 3 Practice Exercises
 
 # Lists
 """ my_list = [1, 'apple', 3.5]
@@ -190,14 +190,18 @@ set_b = {3, 4, 5, 6}
 print(set_a.union(set_b)) """
 
 # Intersection
-""" print(set_a.intersection(set_b)) """
+# print(set_a.intersection(set_b)) 
 
 
 # Difference
-""" set_x = {'cat', 'dog', 'fish'} 
+set_x = {'cat', 'dog', 'fish'} 
 set_y = {'dog', 'bird'}
+ day-4-control-structures
+print(set_x.difference(set_y)) 
+=======
 # day-4-control-structures
 # print(set_x.difference(set_y))
+main
 
 # Day 4 Practice
 # Conditional Statements
@@ -210,26 +214,26 @@ second_condition is true
 elif third_condition:
     # Code to execute if first_condition and second_condition 
 are false but third_condition is true
-else:
-    # Code to execute if none of the conditions are true """
+else: """
+    # Code to execute if none of the conditions are true 
     
 # Key Operations 
 # IF Statement Runs code if a condition is true 
-""" price = 20
+price = 20
 if price < 30:
     print("This is affordable.")
-"""
+
 # ELIF Statement: Adds an additional condition if the first IF is false
-""" price = 35
+price = 35
 if price < 30:
     # This will be skipped because price is more than 30
     print("This is affordable.")
 elif price < 40:
     # It will run this code here instead
-    print("This is a bit expensive.") """
+    print("This is a bit expensive.") 
     
 # ELIF Statement Runs if none of the IF or ELIF conditions are met.
-""" price = 50
+price = 50
 if price < 30:
     # This will be skipped because price is more than 30
     print("This is affordable.")
@@ -238,7 +242,7 @@ elif price < 40:
     print("This is a bit expensive.")
 else:
     # It will run this code here instead
-    print("This is too expensive.") """
+    print("This is too expensive.")
     
 # Nested Conditionals
 """ if first_conditional:
@@ -374,30 +378,30 @@ else:
 # For Loop: Used for iterating over lists, strings, or other iterable sequences.
 """ items = ["apple", "banana", "cherry"]
 for item in items:
-    print(item)"""
+    print(item) """
     
 # While Loop: Used when you don’t know the number of repetitions in advance.
 """ count = 0 
 while count < 5:
     print("Counting:", count)
-    count += 1 """
+    count += 1  """
     
 # Nested Loops
 # a loop placed inside another loop, allowing complex, repeated actions within each iteration of the outer loop.
 # each nested loop should be indented to clearly distinguish it from the outer loop
-""" for outer_item in outer_sequence:
-    for inner_item in inner_sequence:  # Indented to show it's nested
-        print("This is a nested loop example.") """
+#for outer_item in outer_sequence:
+    #for inner_item in inner_sequence:  # Indented to show it's nested
+        #print("This is a nested loop example.")
         
 # Full example:
 """ shape_list = ["circle", "square", "triangle"]
 color_list = ["red", "yellow", "green"] """
 
 # Outer loop: Iterate over each shape
-""" for shape in shape_list:
+""" for shape in shape_list: """
     # Inner loop: Iterate over each color
-    for color in colors:
-        print(f"{shape} is {color}") """
+    # for color in colors:
+        # print(f"{shape} is {color}") """
 
 #RESULT:
 """ circle is red
@@ -408,8 +412,8 @@ square is yellow
 square is green
 triangle is red
 triangle is yellow
-triangle is green """
-
+triangle is green
+"""
 # Practice Exercise
 # Basic for Loop: Create a for loop that prints each item in a list of groceries.
 """ grocery_list = ["fruits", "bread", "soda", "milk"]
@@ -446,8 +450,7 @@ grocery_list = {'apples': {'price': 1.50, 'quantity': 4},'bread': {'price': 2.50
 'quantity': 2}}
 for item, details in grocery_list.items():
      total_cost = details['price'] * details['quantity']
-print(f'{item}: ${total_cost: }') """
-    
+print(f'{item}: ${total_cost: }')   """
 
 
 
