@@ -1,13 +1,12 @@
-""" """ # Day 3 Practice Exercises
-""" # Day 3 Practice Exercises
+# Day 3 Practice Exercises
 
 # Lists
 """ my_list = [1, 'apple', 3.5]
-print(my_list) """
+print(my_list)  """
 
 # Indexing
 """ my_list = [1, 'apple', 3.5]
-print(my_list[0] ) """
+print(my_list[0] )  """
 
 # Slicing
 """ my_list = [1, 'apple', 3.5]
@@ -195,46 +194,46 @@ print(set_a.union(set_b)) """
 
 
 # Difference
-set_x = {'cat', 'dog', 'fish'} 
-set_y = {'dog', 'bird'}
- day-4-control-structures
-print(set_x.difference(set_y)) 
-=======
+""" set_x = {'cat', 'dog', 'fish'} 
+set_y = {'dog', 'bird'} """
+
+#day-4-control-structures
+""" print(set_x.difference(set_y))  """
+
 # day-4-control-structures
 # print(set_x.difference(set_y))
-main
 
 # Day 4 Practice
 # Conditional Statements
 # Syntax
 # if first_condition:
     # Code to execute if first condition is true
-elif second_condition:
+#elif second_condition:
     # Code to execute if first_condition is false but   
-second_condition is true
-elif third_condition:
+#second_condition is true
+#elif third_condition:
     # Code to execute if first_condition and second_condition 
-are false but third_condition is true
-else: """
+#are false but third_condition is true
+#else: """
     # Code to execute if none of the conditions are true 
     
 # Key Operations 
 # IF Statement Runs code if a condition is true 
-price = 20
+""" price = 20
 if price < 30:
-    print("This is affordable.")
+    print("This is affordable.") """
 
 # ELIF Statement: Adds an additional condition if the first IF is false
-price = 35
+""" price = 35
 if price < 30:
     # This will be skipped because price is more than 30
     print("This is affordable.")
 elif price < 40:
     # It will run this code here instead
-    print("This is a bit expensive.") 
+    print("This is a bit expensive.")  """
     
 # ELIF Statement Runs if none of the IF or ELIF conditions are met.
-price = 50
+""" price = 50
 if price < 30:
     # This will be skipped because price is more than 30
     print("This is affordable.")
@@ -244,43 +243,42 @@ elif price < 40:
 else:
     # It will run this code here instead
     print("This is too expensive.")
-    
+"""
 # Nested Conditionals
 """ if first_conditional:
     if nested_conditional: # Indented from the first conditional
         print(“I satisfy the nested conditional”)  """
         
 # Full Example
-# weather = "sunny"
- #temperature = 75
-  
-#print(set_x.diff(set_y)) 
+weather = "sunny"
+temperature = 75
+""" print(set_x.diff(set_y))  """
 
 
 
 # Day 3 Assignment
-""" 
-# Exercise 1: Creating a Grocery List with Tuples
-grapes = ("grapes", 1.00, 10)
-apples = ("apples", 2.00, 5)
-pears = ("pears", 1.50, 2)
 
-grocery_list = []
+# Exercise 1: Creating a Grocery List with Tuples
+""" grapes = ("grapes", 1.00, 10)
+apples = ("apples", 2.00, 5)
+pears = ("pears", 1.50, 2) """
+
+""" grocery_list = []
 grocery_list.append(grapes)
 grocery_list.append(apples)
 grocery_list.append(pears)
-print(grocery_list)
+print(grocery_list) """
 
-total_cost_grapes = 1.00 * 10
+""" total_cost_grapes = 1.00 * 10
 print(f'Total cost of grapes: ${total_cost_grapes: }')
 total_cost_apples = 2.00 * 5
 print(f'Total cost of apples: ${total_cost_apples: }')
 total_cost_pears = 1.50 * 2
-print(f'Total cost of pears: ${total_cost_pears: }')
+print(f'Total cost of pears: ${total_cost_pears: }') """
 
 # Exercise 2: Working with Dictionaries
 
-apple_dict = {'name': 'apple', 'price': .90, 'quantity': 10}
+""" apple_dict = {'name': 'apple', 'price': .90, 'quantity': 10}
 lettuce_dict = {'name': 'lettuce', 'price': 1.99, 'quantity': 20}
 bagel_dict = {'name': 'bagel', 'price': 2.25, 'quantity': 20}
 
@@ -316,9 +314,9 @@ dairy_products.remove('milk')
 print(dairy_products)
 
 desserts.remove('jello')
-print(desserts)
+#print(desserts)
 
-print(dairy_products.intersection(desserts))
+#print(dairy_products.intersection(desserts))
 
 
 
@@ -326,7 +324,7 @@ print(dairy_products.intersection(desserts))
 
 
 # conditional 1: Check if the weather is sunny or not
-""" if weather == "sunny":
+if weather == "sunny":
     # conditional 2: if sunny, check if temperature is above 70
     if temperature > 70:
         print("Wear sunglasses and a t-shirt.")
@@ -354,7 +352,7 @@ else:
     print("Hot") """
     
 # 3.Nested Conditionals   
-""" age = int(input("What is your age:? "))
+age = int(input("What is your age:? "))
 citizenship = input("Are you a citizen? (yes/no): ").lower()
 if age >= 18:
     print("You are old enough to vote")
@@ -363,7 +361,7 @@ if age >= 18:
     else: 
         print("Not eligible: Must bea citizen.")
 else:
-    print("Not eligible: Must be 18 or older.")     """   
+    print("Not eligible: Must be 18 or older.")       
     
 # Loops/While--For
 # Syntax for loops
