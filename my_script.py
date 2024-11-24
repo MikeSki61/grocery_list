@@ -277,54 +277,46 @@ total_cost_pears = 1.50 * 2
 print(f'Total cost of pears: ${total_cost_pears: }') """
 
 # Exercise 2: Working with Dictionaries
+""" # apple_dict = {'name': 'apple', 'price': .90, 'quantity': 10}
+# lettuce_dict = {'name': 'lettuce', 'price': 1.99, 'quantity': 20}
+# bagel_dict = {'name': 'bagel', 'price': 2.25, 'quantity': 20} """
 
-""" apple_dict = {'name': 'apple', 'price': .90, 'quantity': 10}
-lettuce_dict = {'name': 'lettuce', 'price': 1.99, 'quantity': 20}
-bagel_dict = {'name': 'bagel', 'price': 2.25, 'quantity': 20}
+""" # apple_dict['total_cost'] = apple_dict['price'] * apple_dict['quantity']
+# print(f'The total cost of the apples: ${apple_dict['total_cost']:}')
+# lettuce_dict['total_cost'] = lettuce_dict['price'] * lettuce_dict['quantity']
+# print(f'The total cost of lettuce: ${lettuce_dict['total_cost']:}') """
 
-apple_dict['total_cost'] = apple_dict['price'] * apple_dict['quantity']
-print(f'The total cost of the apples: ${apple_dict['total_cost']:}')
+""" # bagel_dict['total_cost'] = bagel_dict['price'] * bagel_dict['quantity']
+# print(f'The total cost of bagels: ${bagel_dict['total_cost']:}') """
 
-lettuce_dict['total_cost'] = lettuce_dict['price'] * lettuce_dict['quantity']
-print(f'The total cost of lettuce: ${lettuce_dict['total_cost']:}')
-
-bagel_dict['total_cost'] = bagel_dict['price'] * bagel_dict['quantity']
-print(f'The total cost of bagels: ${bagel_dict['total_cost']:}')
-
-# Exercise 3: Slicing and Sorting a List
-num_list = [16, 47, 1, 3, 5, 9, 15, 2]
-print(num_list[2:])
-print(num_list[:4])
-print(num_list[-3])
-num_list.sort(reverse=True)
-print(num_list)
-print(len(num_list))
-
+""" # Exercise 3: Slicing and Sorting a List
+# num_list = [16, 47, 1, 3, 5, 9, 15, 2]
+# print(num_list[2:])
+# print(num_list[:4])
+# print(num_list[-3])
+# num_list.sort(reverse=True)
+# print(num_list)
+# print(len(num_list))
+"""
 #Exercise 4: Sets Operations
-#dairy_products = {'milk', 'butter', 'cream', 'yogurt', 'cheese'}
-desserts = {'jello', 'chocolate', 'candy', 'cookies', 'muffins'}
+""" #dairy_products = {'milk', 'butter', 'cream', 'yogurt', 'cheese'}
+# desserts = {'jello', 'chocolate', 'candy', 'cookies', 'muffins'} """
 
-dairy_products.add('ice_cream')
-print(dairy_products)
+""" # dairy_products.add('ice_cream')
+# print(dairy_products) """
 
-desserts.add('ice_cream')
-print(desserts)
+# desserts.add('ice_cream')
+# print(desserts)
 
-dairy_products.remove('milk')
-print(dairy_products)
-
-desserts.remove('jello')
+""" dairy_products.remove('milk')
+print(dairy_products) """
+""" desserts.remove('jello') """
 #print(desserts)
 
 #print(dairy_products.intersection(desserts))
 
-
-
-
-
-
 # conditional 1: Check if the weather is sunny or not
-if weather == "sunny":
+"""if weather == "sunny":
     # conditional 2: if sunny, check if temperature is above 70
     if temperature > 70:
         print("Wear sunglasses and a t-shirt.")
@@ -352,7 +344,7 @@ else:
     print("Hot") """
     
 # 3.Nested Conditionals   
-age = int(input("What is your age:? "))
+""" age = int(input("What is your age:? "))
 citizenship = input("Are you a citizen? (yes/no): ").lower()
 if age >= 18:
     print("You are old enough to vote")
@@ -361,7 +353,7 @@ if age >= 18:
     else: 
         print("Not eligible: Must bea citizen.")
 else:
-    print("Not eligible: Must be 18 or older.")       
+    print("Not eligible: Must be 18 or older.")   """     
     
 # Loops/While--For
 # Syntax for loops
@@ -450,6 +442,12 @@ grocery_list = {'apples': {'price': 1.50, 'quantity': 4},'bread': {'price': 2.50
 for item, details in grocery_list.items():
      total_cost = details['price'] * details['quantity']
 print(f'{item}: ${total_cost: }')   """
+
+
+grocery_list = ["milk", "bread", "eggs", "cheese","bananas"]
+item_to_find = "cheese"
+
+
 
 
 
