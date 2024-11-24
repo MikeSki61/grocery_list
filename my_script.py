@@ -196,7 +196,60 @@ print(set_a.union(set_b)) """
 # Difference
 """ set_x = {'cat', 'dog', 'fish'} 
 set_y = {'dog', 'bird'}
-print(set_x.diff(set_y)) """
+# day-4-control-structures
+# print(set_x.difference(set_y))
+
+# Day 4 Practice
+# Conditional Statements
+# Syntax
+# if first_condition:
+    # Code to execute if first condition is true
+elif second_condition:
+    # Code to execute if first_condition is false but   
+second_condition is true
+elif third_condition:
+    # Code to execute if first_condition and second_condition 
+are false but third_condition is true
+else:
+    # Code to execute if none of the conditions are true """
+    
+# Key Operations 
+# IF Statement Runs code if a condition is true 
+""" price = 20
+if price < 30:
+    print("This is affordable.")
+"""
+# ELIF Statement: Adds an additional condition if the first IF is false
+""" price = 35
+if price < 30:
+    # This will be skipped because price is more than 30
+    print("This is affordable.")
+elif price < 40:
+    # It will run this code here instead
+    print("This is a bit expensive.") """
+    
+# ELIF Statement Runs if none of the IF or ELIF conditions are met.
+""" price = 50
+if price < 30:
+    # This will be skipped because price is more than 30
+    print("This is affordable.")
+elif price < 40:
+    # This will also be skipped because price is more than 40
+    print("This is a bit expensive.")
+else:
+    # It will run this code here instead
+    print("This is too expensive.") """
+    
+# Nested Conditionals
+""" if first_conditional:
+    if nested_conditional: # Indented from the first conditional
+        print(“I satisfy the nested conditional”)  """
+        
+# Full Example
+# weather = "sunny"
+ #temperature = 75
+  
+#print(set_x.diff(set_y)) 
 
 
 
@@ -245,7 +298,7 @@ print(num_list)
 print(len(num_list))
 
 #Exercise 4: Sets Operations
-dairy_products = {'milk', 'butter', 'cream', 'yogurt', 'cheese'}
+#dairy_products = {'milk', 'butter', 'cream', 'yogurt', 'cheese'}
 desserts = {'jello', 'chocolate', 'candy', 'cookies', 'muffins'}
 
 dairy_products.add('ice_cream')
@@ -266,6 +319,148 @@ print(dairy_products.intersection(desserts))
 
 
 
+
+# conditional 1: Check if the weather is sunny or not
+""" if weather == "sunny":
+    # conditional 2: if sunny, check if temperature is above 70
+    if temperature > 70:
+        print("Wear sunglasses and a t-shirt.")
+    else: # matching else statement for conditional 2
+        print("Wear sunglasses and a light jacket.")
+else: # matching else statement for conditional 1
+    print("Bring an umbrella.") """
+    
+# Day 4 Practice Exercises
+
+# 1.Check if number is even or odd
+""" number = int(input("Give me a number:"))
+if number % 2 == 0:
+    print("Even")
+else:
+    print("Odd") """
+    
+# 2. Temperature
+""" temp = int(input("What is the temperature in Celsius or Fahrenheit: "))
+if temp < 15:
+    print("Cold")
+elif temp in range(15, 25):
+    print("Warm")
+else:
+    print("Hot") """
+    
+# 3.Nested Conditionals   
+""" age = int(input("What is your age:? "))
+citizenship = input("Are you a citizen? (yes/no): ").lower()
+if age >= 18:
+    print("You are old enough to vote")
+    if  citizenship == "yes":
+        print("You are eligible to vote.")
+    else: 
+        print("Not eligible: Must bea citizen.")
+else:
+    print("Not eligible: Must be 18 or older.")     """   
+    
+# Loops/While--For
+# Syntax for loops
+""" for item in sequence:  """ 
+# Code to execute for each item
+
+# Syntax for while loops
+""" while condition:  """
+# Code to execute as long as condition is true
+
+# Key Operations
+
+# For Loop: Used for iterating over lists, strings, or other iterable sequences.
+""" items = ["apple", "banana", "cherry"]
+for item in items:
+    print(item)"""
+    
+# While Loop: Used when you don’t know the number of repetitions in advance.
+""" count = 0 
+while count < 5:
+    print("Counting:", count)
+    count += 1 """
+    
+# Nested Loops
+# a loop placed inside another loop, allowing complex, repeated actions within each iteration of the outer loop.
+# each nested loop should be indented to clearly distinguish it from the outer loop
+""" for outer_item in outer_sequence:
+    for inner_item in inner_sequence:  # Indented to show it's nested
+        print("This is a nested loop example.") """
+        
+# Full example:
+""" shape_list = ["circle", "square", "triangle"]
+color_list = ["red", "yellow", "green"] """
+
+# Outer loop: Iterate over each shape
+""" for shape in shape_list:
+    # Inner loop: Iterate over each color
+    for color in colors:
+        print(f"{shape} is {color}") """
+
+#RESULT:
+""" circle is red
+circle is yellow
+circle is green
+square is red
+square is yellow
+square is green
+triangle is red
+triangle is yellow
+triangle is green """
+
+# Practice Exercise
+# Basic for Loop: Create a for loop that prints each item in a list of groceries.
+""" grocery_list = ["fruits", "bread", "soda", "milk"]
+for i in grocery_list:
+    print(i) """
+    
+# While Loop with User Input: Write a program that lets the user add items to a grocery list # until they type "done."
+""" grocery_list = ["fruits", "bread", "soda", "milk"]
+while True:
+    user_input = input("Type a command add or done: ")
+    if user_input == "done":
+        break
+    name = input("Enter an item name: ")
+    amount = int(input("Enter amount: "))
+    cost = float(input("Enter cost: "))
+    store = input("Enter store name: ")
+    new_item_dict = {"name": name, "amount": amount, "cost": cost, "store": store}
+    grocery_list.append(new_item_dict)
+    print(f"{"name"} was added to the grocery list.")
+    print(grocery_list)
+
+for item in grocery_list:
+        print(item) 
+print(grocery_list)
+print(grocery_list) 
+
+items = ['bread', 'peanuts', 'milk', 'butter']
+for item in items:
+    print(item)      
+    
+grocery_list = []
+
+grocery_list = {'apples': {'price': 1.50, 'quantity': 4},'bread': {'price': 2.50, 'quantity': 3},'ice cream': {'price': 3.00,
+'quantity': 2}}
+for item, details in grocery_list.items():
+     total_cost = details['price'] * details['quantity']
+print(f'{item}: ${total_cost: }') """
+    
+
+
+
+    
+
+
+
+
+
+
+         
+ 
+ 
 
 
 
