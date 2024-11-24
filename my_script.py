@@ -1,4 +1,4 @@
-# Day 3 Practice Exercises
+""" # Day 3 Practice Exercises
 
 # Lists
 """ my_list = [1, 'apple', 3.5]
@@ -201,7 +201,7 @@ print(set_x.diff(set_y)) """
 
 
 # Day 3 Assignment
-
+""" 
 # Exercise 1: Creating a Grocery List with Tuples
 grapes = ("grapes", 1.00, 10)
 apples = ("apples", 2.00, 5)
@@ -261,7 +261,6 @@ desserts.remove('jello')
 print(desserts)
 
 print(dairy_products.intersection(desserts))
-
 
 
 
