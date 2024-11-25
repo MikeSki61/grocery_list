@@ -15,3 +15,7 @@
 ### Added
 -Exercises for Day 4, Control Structures- Conditional Statements, For and While Loops,
 Loop Control, and Error Messages
+
+## [0.5.0] -2024-11-24
+### Added 
+-Day 4 Assignment
