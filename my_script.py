@@ -1,12 +1,12 @@
-""" """ # Day 3 Practice Exercises
+# Day 3 Practice Exercises
 
 # Lists
 """ my_list = [1, 'apple', 3.5]
-print(my_list) """
+print(my_list)  """
 
 # Indexing
 """ my_list = [1, 'apple', 3.5]
-print(my_list[0] ) """
+print(my_list[0] )  """
 
 # Slicing
 """ my_list = [1, 'apple', 3.5]
@@ -194,41 +194,46 @@ print(set_a.union(set_b)) """
 
 
 # Difference
-set_x = {'cat', 'dog', 'fish'} 
-set_y = {'dog', 'bird'}
-print(set_x.difference(set_y)) 
+""" set_x = {'cat', 'dog', 'fish'} 
+set_y = {'dog', 'bird'} """
+
+#day-4-control-structures
+""" print(set_x.difference(set_y))  """
+
+# day-4-control-structures
+# print(set_x.difference(set_y))
 
 # Day 4 Practice
 # Conditional Statements
 # Syntax
-""" if first_condition:
+# if first_condition:
     # Code to execute if first condition is true
-elif second_condition:
+#elif second_condition:
     # Code to execute if first_condition is false but   
-second_condition is true
-elif third_condition:
+#second_condition is true
+#elif third_condition:
     # Code to execute if first_condition and second_condition 
-are false but third_condition is true
-else: """
+#are false but third_condition is true
+#else: """
     # Code to execute if none of the conditions are true 
     
 # Key Operations 
 # IF Statement Runs code if a condition is true 
-price = 20
+""" price = 20
 if price < 30:
-    print("This is affordable.")
+    print("This is affordable.") """
 
 # ELIF Statement: Adds an additional condition if the first IF is false
-price = 35
+""" price = 35
 if price < 30:
     # This will be skipped because price is more than 30
     print("This is affordable.")
 elif price < 40:
     # It will run this code here instead
-    print("This is a bit expensive.") 
+    print("This is a bit expensive.")  """
     
 # ELIF Statement Runs if none of the IF or ELIF conditions are met.
-price = 50
+""" price = 50
 if price < 30:
     # This will be skipped because price is more than 30
     print("This is affordable.")
@@ -238,19 +243,80 @@ elif price < 40:
 else:
     # It will run this code here instead
     print("This is too expensive.")
-    
+"""
 # Nested Conditionals
 """ if first_conditional:
     if nested_conditional: # Indented from the first conditional
         print(“I satisfy the nested conditional”)  """
         
 # Full Example
-""" weather = "sunny"
+weather = "sunny"
 temperature = 75
+""" print(set_x.diff(set_y))  """
+
+
+
+# Day 3 Assignment
+
+# Exercise 1: Creating a Grocery List with Tuples
+""" grapes = ("grapes", 1.00, 10)
+apples = ("apples", 2.00, 5)
+pears = ("pears", 1.50, 2) """
+
+""" grocery_list = []
+grocery_list.append(grapes)
+grocery_list.append(apples)
+grocery_list.append(pears)
+print(grocery_list) """
+
+""" total_cost_grapes = 1.00 * 10
+print(f'Total cost of grapes: ${total_cost_grapes: }')
+total_cost_apples = 2.00 * 5
+print(f'Total cost of apples: ${total_cost_apples: }')
+total_cost_pears = 1.50 * 2
+print(f'Total cost of pears: ${total_cost_pears: }') """
+
+# Exercise 2: Working with Dictionaries
+""" # apple_dict = {'name': 'apple', 'price': .90, 'quantity': 10}
+# lettuce_dict = {'name': 'lettuce', 'price': 1.99, 'quantity': 20}
+# bagel_dict = {'name': 'bagel', 'price': 2.25, 'quantity': 20} """
+
+""" # apple_dict['total_cost'] = apple_dict['price'] * apple_dict['quantity']
+# print(f'The total cost of the apples: ${apple_dict['total_cost']:}')
+# lettuce_dict['total_cost'] = lettuce_dict['price'] * lettuce_dict['quantity']
+# print(f'The total cost of lettuce: ${lettuce_dict['total_cost']:}') """
+
+""" # bagel_dict['total_cost'] = bagel_dict['price'] * bagel_dict['quantity']
+# print(f'The total cost of bagels: ${bagel_dict['total_cost']:}') """
+
+""" # Exercise 3: Slicing and Sorting a List
+# num_list = [16, 47, 1, 3, 5, 9, 15, 2]
+# print(num_list[2:])
+# print(num_list[:4])
+# print(num_list[-3])
+# num_list.sort(reverse=True)
+# print(num_list)
+# print(len(num_list))
 """
+#Exercise 4: Sets Operations
+""" #dairy_products = {'milk', 'butter', 'cream', 'yogurt', 'cheese'}
+# desserts = {'jello', 'chocolate', 'candy', 'cookies', 'muffins'} """
+
+""" # dairy_products.add('ice_cream')
+# print(dairy_products) """
+
+# desserts.add('ice_cream')
+# print(desserts)
+
+""" dairy_products.remove('milk')
+print(dairy_products) """
+""" desserts.remove('jello') """
+#print(desserts)
+
+#print(dairy_products.intersection(desserts))
 
 # conditional 1: Check if the weather is sunny or not
-""" if weather == "sunny":
+"""if weather == "sunny":
     # conditional 2: if sunny, check if temperature is above 70
     if temperature > 70:
         print("Wear sunglasses and a t-shirt.")
@@ -287,7 +353,7 @@ if age >= 18:
     else: 
         print("Not eligible: Must bea citizen.")
 else:
-    print("Not eligible: Must be 18 or older.")     """   
+    print("Not eligible: Must be 18 or older.")   """     
     
 # Loops/While--For
 # Syntax for loops
@@ -377,6 +443,126 @@ for item, details in grocery_list.items():
      total_cost = details['price'] * details['quantity']
 print(f'{item}: ${total_cost: }')   """
 
+
+# Loop Control 
+
+# Break Stops when a condition is met
+""" for item in ["apple", "banana", "cherry", "mango"]:
+    if item == "banana":
+        break
+print("{item} is yellow.")
+"""
+# Output: 
+# banana is yellow.
+
+# Continue--Skips the current loop iteration
+""" yellow_fruits = ["banana", "mango"]
+red_fruits = []
+
+for item in ["apple", "banana", "cherry", "mango"]:
+    if item in yellow_fruits:
+        continue
+    red_fruits.append(item)
+print(red_fruits) """
+
+# Output:
+['apple', 'cherry']
+
+# Pass--acts as a placeholder allowing the loop to continue without action
+""" for item in ["apple", "banana", "cherry", "mango"]:
+    if item == "banana":
+        pass  # Does nothing
+    print(item) """
+
+
+""" grocery_list = ["milk", "bread", "eggs", "cheese","bananas"]
+item_to_find = "tea"
+for item in grocery_list:
+    if item == item_to_find:
+        print(f"Found {item_to_find}!")
+        break
+else:
+    print(f"{item_to_find} not found in the grocery list.")
+    
+fruits = ["apples", "bananas"]
+
+for item in grocery_list:
+    if item in fruits:
+        pass
+    else:
+    
+        print(f"Non-fruit item: {item}")
+"""
+# Exercises---Break ---Continue---Pass
+# Break
+""" for item in  ["milk", "butter", "eggs"]:
+    if item == "milk":
+        break
+print(f"{item} is found!.")
+"""
+# Continue
+""" grocery_list = ["milk", "bread", "eggs", "cheese","bananas"]
+fruits = ["apples", "bananas"]
+
+for item in grocery_list:
+    if item in fruits:
+        continue
+    else:
+    
+        print(f"Non-fruit item: {item}") """
+        
+# Pass
+""" grocery_list = ["milk", "bread", "eggs", "cheese","bananas"]
+fruits = ["apples", "bananas"]
+
+for item in grocery_list:
+    if item in fruits:
+        pass
+    else:
+    
+        print(f"Non-fruit item: {item}") """
+        
+# Errors/Tracebacks
+# Try
+# try:
+    # Code to try
+#except ErrorType:
+    # Code to execute if error occurs
+""" try:
+    result = 10 / 0
+except ZeroDivisionError:
+    print("You can't divide by zero!")   """
+
+""" try:
+    # some code that may cause an error
+except (TypeError, ValueError) as e:
+    print(f"An error occurred: {e}")
+"""
+""" Traceback (most recent call last):
+File "example.py", line 6, in <module>
+    result = divide_numbers(10, 0)
+File "example.py", line 2, in divide_numbers
+    return a / b
+ZeroDivisionError: division by zero """
+
+""" count = 0
+while count < 5:
+    print(count)
+    count += 1  # Ensures the loop will end """
+    
+""" number =int(input("Please enter a number: "))
+if number <= 5:
+        print(f"The number is {number}.")
+try:
+    print("You have not entered a number.")
+ """
+
+
+
+    
+
+
+    
 
 
     
