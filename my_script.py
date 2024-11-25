@@ -444,6 +444,126 @@ for item, details in grocery_list.items():
 print(f'{item}: ${total_cost: }')   """
 
 
+# Loop Control 
+
+# Break Stops when a condition is met
+""" for item in ["apple", "banana", "cherry", "mango"]:
+    if item == "banana":
+        break
+print("{item} is yellow.")
+"""
+# Output: 
+# banana is yellow.
+
+# Continue--Skips the current loop iteration
+""" yellow_fruits = ["banana", "mango"]
+red_fruits = []
+
+for item in ["apple", "banana", "cherry", "mango"]:
+    if item in yellow_fruits:
+        continue
+    red_fruits.append(item)
+print(red_fruits) """
+
+# Output:
+['apple', 'cherry']
+
+# Pass--acts as a placeholder allowing the loop to continue without action
+""" for item in ["apple", "banana", "cherry", "mango"]:
+    if item == "banana":
+        pass  # Does nothing
+    print(item) """
+
+
+""" grocery_list = ["milk", "bread", "eggs", "cheese","bananas"]
+item_to_find = "tea"
+for item in grocery_list:
+    if item == item_to_find:
+        print(f"Found {item_to_find}!")
+        break
+else:
+    print(f"{item_to_find} not found in the grocery list.")
+    
+fruits = ["apples", "bananas"]
+
+for item in grocery_list:
+    if item in fruits:
+        pass
+    else:
+    
+        print(f"Non-fruit item: {item}")
+"""
+# Exercises---Break ---Continue---Pass
+# Break
+""" for item in  ["milk", "butter", "eggs"]:
+    if item == "milk":
+        break
+print(f"{item} is found!.")
+"""
+# Continue
+""" grocery_list = ["milk", "bread", "eggs", "cheese","bananas"]
+fruits = ["apples", "bananas"]
+
+for item in grocery_list:
+    if item in fruits:
+        continue
+    else:
+    
+        print(f"Non-fruit item: {item}") """
+        
+# Pass
+""" grocery_list = ["milk", "bread", "eggs", "cheese","bananas"]
+fruits = ["apples", "bananas"]
+
+for item in grocery_list:
+    if item in fruits:
+        pass
+    else:
+    
+        print(f"Non-fruit item: {item}") """
+        
+# Errors/Tracebacks
+# Try
+# try:
+    # Code to try
+#except ErrorType:
+    # Code to execute if error occurs
+""" try:
+    result = 10 / 0
+except ZeroDivisionError:
+    print("You can't divide by zero!")   """
+
+""" try:
+    # some code that may cause an error
+except (TypeError, ValueError) as e:
+    print(f"An error occurred: {e}")
+"""
+""" Traceback (most recent call last):
+File "example.py", line 6, in <module>
+    result = divide_numbers(10, 0)
+File "example.py", line 2, in divide_numbers
+    return a / b
+ZeroDivisionError: division by zero """
+
+""" count = 0
+while count < 5:
+    print(count)
+    count += 1  # Ensures the loop will end """
+    
+""" number =int(input("Please enter a number: "))
+if number <= 5:
+        print(f"The number is {number}.")
+try:
+    print("You have not entered a number.")
+ """
+
+
+
+    
+
+
+    
+
 
 
 
