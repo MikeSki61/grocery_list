@@ -10,3 +10,8 @@
 
 ## [0.3.0] -2024-11-24
 ### exercises in for and while loops
+
+## [0.4.0] -2024-11-24
+### Added
+-Exercises for Day 4, Control Structures- Conditional Statements, For and While Loops,
+Loop Control, and Error Messages
