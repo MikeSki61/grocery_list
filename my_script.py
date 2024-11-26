@@ -558,6 +558,83 @@ try:
 """
 
 
+# Day 5 -- Functions and Modules
+""" def my_first_function():
+    print("This is a function")
+    
+my_first_function() """
+
+"""  def :every function begins with this keyword
+    function name :what you want to call the function ‘my_function_to_add’
+    parenthesis () :this is where parameters live
+    parameters  :variables that can be used as inputs of the function
+    colon : marks the end of your function definition.  
+    Indentation :the actual code block running the logic should be indented """ 
+    
+""" def print_something():
+    print("Look,I'm printing something!")
+        
+print_something() """
+
+# CALLING A FUNCTION
+# Call (or "run") the function by typing its name followed by parentheses.
+
+# Practice Exercises:
+
+# Display a message:
+""" def message():
+    print("Welcome to this course.")
+message() """
+
+# Print your favorite food:
+""" def fav_food():
+    print("My favorite food is Italian.")
+fav_food() """
+
+# Show sum of numbers:
+""" def show_sum():
+    print(5 + 10)
+    
+show_sum() """
+
+# Parameters and Return Functions
+# Parameters
+
+grocery_list_a = [{"name": "pasta", "cost":2.00, "amount": 2},
+                {"name": "onion", "cost":1.99, "amount": 1},
+                {"name": "stewed_tomatoes", "cost":1.35, "amount": 1}
+]
+
+grocery_list_b = [
+    {"name": "bread", "cost": 3.75, "amount": 1},
+    {"name": "milk", "cost": 6.50, "amount": 1,},
+    {"name": "strawberries", "cost": 10.25, "amount": 1}
+]
+def calculate_total_cost(grocery_list, round_cost):
+    total_cost = 0
+
+    for item in grocery_list:
+        cost = item["amount"] * item["cost"]
+        total_cost += cost
+        
+    if round_cost:
+        total_cost = round(total_cost)
+        
+    # print(f"The total cost is ${total_cost}")
+    return total_cost
+
+    
+grocery_list_a_cost = calculate_total_cost(grocery_list = grocery_list_a, round_cost = True)
+grocery_list_b_cost = calculate_total_cost(grocery_list = grocery_list_b, round_cost = True)
+
+print(f"This is the value of grocery list a ${grocery_list_a_cost}")
+print(f"This is the value of grocery list b ${grocery_list_b_cost}")
+combined_value = grocery_list_a_cost + grocery_list_b_cost
+print(f"The total value of list a and list b is :{combined_value}")
+    
+
+
+
 
     
 
