@@ -785,7 +785,7 @@ def greet():
 #Hello, Skyler!   # output
 
 # test outside a function
-print(name)        
+#print(name)        
 #Error: NameError - name is not defined  # Errors out """
 
 # Practice Exercises--Scope
@@ -846,8 +846,8 @@ def say_hello(name):
     return f"Hello, {name}!"
 
 # Step 2: Now, in another file, in the same directory, import and use the custom module:
-import greetings
-print(greetings.say_hello("Skyler!"))   
+#import greetings
+#print(greetings.say_hello("Skyler!"))   
 #Hello, Skyler!  # output
 
 # How to import Modules
