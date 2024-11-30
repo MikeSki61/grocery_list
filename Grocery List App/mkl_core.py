@@ -100,7 +100,7 @@ print("grocery list after: ")
 list_items()
  """
 
-export_items()
+#export_items()
 
 
 
