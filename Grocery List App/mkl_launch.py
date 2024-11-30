@@ -1,8 +1,4 @@
 import mkl_core
-<<<<<<< HEAD
-=======
-
->>>>>>> 4fd45eed3041b321d9289d023b0c844e8fbba91f
 print("Welcome to your Grocery Shopping List!")
 def launch():
     
