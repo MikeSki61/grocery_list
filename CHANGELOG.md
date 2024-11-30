@@ -1,17 +1,13 @@
 # Changelog
-day-5-functions-and-modules
+
 
 ## [0.6.0]
 ## -2024-29-24
 ### Added
+-day-5-functions-and-modules
 - agl_core.py: add functions to add, edit, list, and remove items from a grocery list
 - Agl_launch.py:  add function to interact with user to add, edit, list, and remove items from a grocery list
 - added practice exercise to my_script.py
-
-## [0.5.0] -2024-11-24
-### Added 
--Day 4 Assignment
-=======
 
 ## [0.5.0] -2024-11-24
 ### Added 

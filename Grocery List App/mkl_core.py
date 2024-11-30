@@ -91,20 +91,7 @@ def calculate_total_cost(grocery_list, round_cost = False, tax = 0.8):
         
     return total_cost
 
-<<<<<<< HEAD
 #export_items() 
-=======
-""" print("grocery list before: ")
-list_items()
-
-edit_item('bread'," Acme", 2.00, 2, 1,True)
-
-print("grocery list after: ")
-list_items()
- """
-
-#export_items()
->>>>>>> 4fd45eed3041b321d9289d023b0c844e8fbba91f
 
 
 
