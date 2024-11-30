@@ -557,7 +557,191 @@ try:
     print("You have not entered a number.")
 """
 
+# Day 5 -- Functions and Modules
+""" def my_first_function():
+    print("This is a function")
+    
+my_first_function() """
 
+"""  def :every function begins with this keyword
+    function name :what you want to call the function ‘my_function_to_add’
+    parenthesis () :this is where parameters live
+    parameters  :variables that can be used as inputs of the function
+    colon : marks the end of your function definition.  
+    Indentation :the actual code block running the logic should be indented """ 
+    
+""" def print_something():
+    print("Look,I'm printing something!")
+        
+print_something() """
+
+
+# Day 5 --Functions and Modules
+# Calling a Function
+# Call (or "run") the function by typing its name followed by parentheses.
+# ex: name of function()
+
+# Practice Exercises:
+
+# Display a message: 
+def message():
+    print("Welcome to this course.")
+message()
+
+# Print your favorite food:
+def fav_food():
+    print("My favorite food is Italian.")
+fav_food()
+
+# Show sum of numbers:
+def show_sum():
+    print(5 + 10)
+    
+show_sum()
+
+# Parameters and Return Functions
+# Parameters
+
+grocery_list_a = [{"name": "pasta", "cost":2.00, "amount": 2},
+                {"name": "onion", "cost":1.99, "amount": 1},
+                {"name": "stewed_tomatoes", "cost":1.35, "amount": 1}
+]
+
+grocery_list_b = [
+    {"name": "bread", "cost": 3.75, "amount": 1},
+    {"name": "milk", "cost": 6.50, "amount": 1,},
+    {"name": "strawberries", "cost": 10.25, "amount": 1}
+]
+def calculate_total_cost(grocery_list, round_cost = False, tax = 0.8):
+    total_cost = 0
+
+    for item in grocery_list:
+        cost = item["amount"] * item["cost"]
+        total_cost += cost
+        
+    if round_cost:
+        total_cost = round(total_cost)
+        
+    if tax:
+        tax_cost = total_cost * tax
+        total_cost += tax_cost
+        
+    # print(f"The total cost is ${total_cost}")
+    return total_cost
+
+    
+grocery_list_a_cost = calculate_total_cost(grocery_list = grocery_list_a)
+grocery_list_b_cost = calculate_total_cost(grocery_list = grocery_list_b, round_cost = False)
+
+print(f"This is the value of grocery list a ${grocery_list_a_cost}")
+print(f"This is the value of grocery list b ${grocery_list_b_cost}")
+combined_value = grocery_list_a_cost + grocery_list_b_cost 
+print(f"The total value of list a and list b is :{combined_value}") 
+
+# Day 5 Practice Exercises--Parameters and Return Values
+
+# def print_grocery_list_items(grocery_list):  # Step 1--Define the Function
+    #print(grocery_list) # Step 2-- Code Block, what code needs to run to accomplish the task
+
+# Test 1:  
+def print_grocery_list_items (grocery_list):
+    print(grocery_list)
+    
+fruits_grocery_list = ['apple', 'banana', 'grapes']
+veggie_list = ['kale', 'eggplant', 'spinach', 'broccoli']
+misc_items = ['shampoo', 'dish-soap', 'sponges']  
+# Test Lists:
+
+print_grocery_list_items(fruits_grocery_list)
+# Test 2:
+print_grocery_list_items(veggie_list)
+# Test 3
+print_grocery_list_items(misc_items) 
+
+# Improve the Function
+
+def print_grocery_list_items(grocery_list):
+    print("We need to buy the following: ") # Be more explicit 
+    for item in grocery_list:
+        print(item)  # print each item one at a time
+
+# Call the function using fruits_grocery_list
+print_grocery_list_items(fruits_grocery_list)
+
+
+def print_grocery_list_items(grocery_list, nice_to_have_list=None):
+    if nice_to_have_list != None:  # != means 'not equal to' 
+        print("If possible, it would be nice to buy the following as well:")
+    for item in nice_to_have_list:
+        print(item)
+
+
+# Testing the optional parameter
+def print_grocery_list_items(grocery_list, nice_to_have_list=None):
+    print("We need to buy the following: ")
+    for item in grocery_list:
+        print(item) 
+
+    if nice_to_have_list:
+        # ‘\n’ means new line. So this will add a blank line
+        print("\nIf possible, it would be nice to buy the following as well:")
+        for item in nice_to_have_list:
+            print(item)
+#Test List
+desserts_list = ['tiramisu', 'ice cream', 'candy bar']
+fruits_grocery_list = ['apple', 'banana', 'grapes']
+# Call the function WITHOUT the optional parameter
+print_grocery_list_items(fruits_grocery_list)
+print_grocery_list_items(fruits_grocery_list, nice_to_have_list=desserts_list)
+
+
+#Availability Function
+def check_availability(item_name, stock_status):
+    if stock_status:
+        print(f"{item_name} is available.")
+    else:
+        print(f"{item_name} is out of stock.")
+        
+check_availability("Bananas", True)   
+# Output: Bananas is available.
+
+check_availability("Milk", False)   
+# Output: Milk is out of stock.
+
+def check_availability_in_store(item_name, stock_status, store_name):
+    if stock_status:
+        print(f"{item_name} are available at {store_name}")
+    else:
+        print(f"{item_name} are out of stock at {store_name}")
+        
+check_availability_in_store("Apples", True, "SuperMart") 
+check_availability_in_store("Eggs", False, "Fresh Foods")  
+
+#Freshness of a product.
+def check_freshness(item_name, days_since_purchase):
+    if days_since_purchase < 3:
+        return f"{item_name} is fresh."
+    else:
+        return f"{item_name} might be past its prime."
+
+message = check_freshness("Lettuce", 2)
+print(message)      
+print(check_freshness("Tomatoes", 7)) 
+
+# Practice Exercises
+# Grocery Item Search
+
+
+def find_item(item_name, is_available):
+    if is_available:
+        print(f"{item_name} is available.")
+    else:
+        print(f"{item_name} is not available.")
+
+day-5-functions-and-modules
+find_item("Orange Juice", True)    
+find_item("Bread", False)  
+=======
 # Day 5 -- Functions and Modules
 """ def my_first_function():
     print("This is a function")
@@ -636,10 +820,163 @@ print(f"The total value of list a and list b is :{combined_value}")
 
 
 
+
+# Favorite Snack 
+def favorite_snack(snack_name, quantity_left):
+    if quantity_left:
+        return(f"You have some {snack_name} left to enjoy")
+    else:
+        return(f"You're out of {snack_name}.")
+        
+print(favorite_snack("Chips", 3))   
+print(favorite_snack("Cookies", 0))       
+
+def item_location(item_name, store_section):
+    if store_section:
+        return(f"Find {item_name} in the {store_section}.")
+    else:
+        return(f"Find {item_name} in the {store_section}.")
     
+print(item_location("Milk", "Dairy Aisle"))
+print(item_location("Apples", "Produce Section")) 
+
+# Scope Of Variables
+
+#message = "I love chocolate!" # Global
+def chocolate():
+    message = "I love chocolate!" # Local
+    print(message)
+
+# test inside a function
+chocolate()
+#I love chocolate!  # output
+
+# test outside a function
+print(message)
+#I love chocolate!  # output """
+
+# LifeTime of Variables
+def greet():
+    name = "Skyler"
+    print(f"Hello, {name}!")
+
+# test inside a function
+#greet()
+#Hello, Skyler!   # output
+
+# test outside a function
+#print(name)        
+#Error: NameError - name is not defined  # Errors out """
+
+# Practice Exercises--Scope
+
+food = "Pasta"
+def favorite_food():
+    food = "Soup"
+    print("Local Food", food) # local var
+
+favorite_food()
+print("Global food:", food) # global var """
+    
+    
+def counter():
+    count = 0
+    count += 1
+    print("Count", count)
+    
+counter()
+counter()
+    
+user_name = "Mike"   # Global variable
+
+def change_name():
+    user_name = "Tommy"  # Local variable
+    print("Inside function:", user_name)
+
+change_name()                         # Prints: Inside function: 
+print("Outside function:", user_name) # Prints: Outside function:  """
+
+# Modules--
+# Create and Import Modules
+import math # Built in Module
+print(math.sqrt(16))
+
+import random
+print(random.randint(1, 10))  # Prints a random number between 1 and 10 """
+
+from math import pi, sqrt
+
+print(pi)
+3.141592653589793   # output
+
+print(sqrt(25))
+5.0   # output
+
+import numpy as np
+array = np.array([1, 2, 3])  # we use alias np instead of numpy
+print(array)
+#[1 2 3]   output 
+
+# Creating and Importing Modules
+# Special Module Concepts
 
 
+# Step 1: Create a file called greetings.py with the following content:
+def say_hello(name):
+    return f"Hello, {name}!"
+
+# Step 2: Now, in another file, in the same directory, import and use the custom module:
+#import greetings
+#print(greetings.say_hello("Skyler!"))   
+#Hello, Skyler!  # output
+
+# How to import Modules
+# Import Entire Modules
+import random
+print((random.randint(1,20)))
+
+
+#Import Special Functions or Variables
+from math import pi, sqrt
+
+print(pi)
+3.141592653589793   # output
+
+print(sqrt(25))
+5.0   # output
+
+# Using Aliases
+import numpy 
+array = numpy.array([1, 2, 3])  # we use alias np instead of numpy
+print(array)
+#[1 2 3]   # output
+
+# Creating and Importing Modules
+
+# To create your own modules, you simply write Python code in a separate file and then import it.
+#Creating Module A:
+#Step 1: Create a new file called module_a.py. 
+#Write a simple function inside module_a.py named ‘welcome’:
+def welcome():
+    print("Welcome to Module A!")
     
+# Special Module Concepts
+#c See Example in example.py file>>>
+
+# Practice Exercises
+#Exercise 1: Create a Custom Module: 
+#Follow the instructions above and create module_a.py and module_b.py. Try running the commands mentioned on your own. Add functions in module_a and try calling them in module_b.
+
+# Exercise 2: Import Specific Functions
+#From the datetime module, import the date class and print today’s date.
+
+from datetime import date
+print(date.today())
+
+
+
+
+
 
 
 
