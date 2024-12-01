@@ -1,7 +1,13 @@
 # Changelog
 
-## [0.6.0]
-## -2024-29-24
+## [0.7.0] -2024-12-1
+## Added
+-Day 6 completed code.
+-pushed to git hub for review.
+-cleaned up code to PEP 8 standards.
+-Tested and Verified code works as it's supposed to.
+
+## [0.6.0]--2024-11-29
 ### Added
 -day-5-functions-and-modules
 - agl_core.py: add functions to add, edit, list, and remove items from a grocery list
