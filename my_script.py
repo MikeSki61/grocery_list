@@ -250,8 +250,8 @@ else:
         print(“I satisfy the nested conditional”)  """
         
 # Full Example
-weather = "sunny"
-temperature = 75
+""" weather = "sunny"
+temperature = 75 """
 """ print(set_x.diff(set_y))  """
 
 
@@ -584,35 +584,35 @@ print_something() """
 # Practice Exercises:
 
 # Display a message: 
-def message():
+""" def message():
     print("Welcome to this course.")
-message()
+message() """
 
 # Print your favorite food:
-def fav_food():
+""" def fav_food():
     print("My favorite food is Italian.")
 fav_food()
-
+"""
 # Show sum of numbers:
-def show_sum():
+""" def show_sum():
     print(5 + 10)
     
-show_sum()
+show_sum() """
 
 # Parameters and Return Functions
 # Parameters
 
-grocery_list_a = [{"name": "pasta", "cost":2.00, "amount": 2},
+""" grocery_list_a = [{"name": "pasta", "cost":2.00, "amount": 2},
                 {"name": "onion", "cost":1.99, "amount": 1},
                 {"name": "stewed_tomatoes", "cost":1.35, "amount": 1}
 ]
-
-grocery_list_b = [
+"""
+""" grocery_list_b = [
     {"name": "bread", "cost": 3.75, "amount": 1},
     {"name": "milk", "cost": 6.50, "amount": 1,},
     {"name": "strawberries", "cost": 10.25, "amount": 1}
-]
-def calculate_total_cost(grocery_list, round_cost = False, tax = 0.8):
+] """
+""" def calculate_total_cost(grocery_list, round_cost = False, tax = 0.8):
     total_cost = 0
 
     for item in grocery_list:
@@ -625,18 +625,18 @@ def calculate_total_cost(grocery_list, round_cost = False, tax = 0.8):
     if tax:
         tax_cost = total_cost * tax
         total_cost += tax_cost
-        
+"""
     # print(f"The total cost is ${total_cost}")
-    return total_cost
+""" return total_cost """
 
     
-grocery_list_a_cost = calculate_total_cost(grocery_list = grocery_list_a)
-grocery_list_b_cost = calculate_total_cost(grocery_list = grocery_list_b, round_cost = False)
+""" grocery_list_a_cost = calculate_total_cost(grocery_list = grocery_list_a)
+grocery_list_b_cost = calculate_total_cost(grocery_list = grocery_list_b, round_cost = False) """
 
-print(f"This is the value of grocery list a ${grocery_list_a_cost}")
+""" print(f"This is the value of grocery list a ${grocery_list_a_cost}")
 print(f"This is the value of grocery list b ${grocery_list_b_cost}")
 combined_value = grocery_list_a_cost + grocery_list_b_cost 
-print(f"The total value of list a and list b is :{combined_value}") 
+print(f"The total value of list a and list b is :{combined_value}") """ 
 
 # Day 5 Practice Exercises--Parameters and Return Values
 
@@ -644,81 +644,81 @@ print(f"The total value of list a and list b is :{combined_value}")
     #print(grocery_list) # Step 2-- Code Block, what code needs to run to accomplish the task
 
 # Test 1:  
-def print_grocery_list_items (grocery_list):
-    print(grocery_list)
+""" def print_grocery_list_items (grocery_list):
+    print(grocery_list) """
     
-fruits_grocery_list = ['apple', 'banana', 'grapes']
+""" fruits_grocery_list = ['apple', 'banana', 'grapes']
 veggie_list = ['kale', 'eggplant', 'spinach', 'broccoli']
-misc_items = ['shampoo', 'dish-soap', 'sponges']  
+misc_items = ['shampoo', 'dish-soap', 'sponges']  """ 
 # Test Lists:
 
-print_grocery_list_items(fruits_grocery_list)
+""" print_grocery_list_items(fruits_grocery_list)
 # Test 2:
 print_grocery_list_items(veggie_list)
 # Test 3
-print_grocery_list_items(misc_items) 
+print_grocery_list_items(misc_items)  """
 
 # Improve the Function
 
-def print_grocery_list_items(grocery_list):
+""" def print_grocery_list_items(grocery_list):
     print("We need to buy the following: ") # Be more explicit 
     for item in grocery_list:
-        print(item)  # print each item one at a time
+        print(item)  # print each item one at a time """
 
 # Call the function using fruits_grocery_list
-print_grocery_list_items(fruits_grocery_list)
+""" print_grocery_list_items(fruits_grocery_list) """
 
 
-def print_grocery_list_items(grocery_list, nice_to_have_list=None):
+""" def print_grocery_list_items(grocery_list, nice_to_have_list=None):
     if nice_to_have_list != None:  # != means 'not equal to' 
         print("If possible, it would be nice to buy the following as well:")
     for item in nice_to_have_list:
-        print(item)
+        print(item) """
 
 
 # Testing the optional parameter
-def print_grocery_list_items(grocery_list, nice_to_have_list=None):
+""" def print_grocery_list_items(grocery_list, nice_to_have_list=None):
     print("We need to buy the following: ")
     for item in grocery_list:
         print(item) 
-
-    if nice_to_have_list:
+"""
+""" if nice_to_have_list:
         # ‘\n’ means new line. So this will add a blank line
         print("\nIf possible, it would be nice to buy the following as well:")
         for item in nice_to_have_list:
-            print(item)
+            print(item) """
 #Test List
-desserts_list = ['tiramisu', 'ice cream', 'candy bar']
+""" desserts_list = ['tiramisu', 'ice cream', 'candy bar']
 fruits_grocery_list = ['apple', 'banana', 'grapes']
 # Call the function WITHOUT the optional parameter
 print_grocery_list_items(fruits_grocery_list)
-print_grocery_list_items(fruits_grocery_list, nice_to_have_list=desserts_list)
+print_grocery_list_items(fruits_grocery_list, nice_to_have_list=desserts_list) """
 
 
 #Availability Function
-def check_availability(item_name, stock_status):
+""" def check_availability(item_name, stock_status):
     if stock_status:
         print(f"{item_name} is available.")
     else:
         print(f"{item_name} is out of stock.")
         
-check_availability("Bananas", True)   
+check_availability("Bananas", True)    """
 # Output: Bananas is available.
 
-check_availability("Milk", False)   
-# Output: Milk is out of stock.
+""" check_availability("Milk", False)   
+# Output: Milk is out of stock. """
 
-def check_availability_in_store(item_name, stock_status, store_name):
+""" def check_availability_in_store(item_name, stock_status, store_name):
     if stock_status:
         print(f"{item_name} are available at {store_name}")
     else:
-        print(f"{item_name} are out of stock at {store_name}")
+        print(f"{item_name} are out of stock at {store_name}") """
         
-check_availability_in_store("Apples", True, "SuperMart") 
-check_availability_in_store("Eggs", False, "Fresh Foods")  
+""" check_availability_in_store("Apples", True, "SuperMart") 
+check_availability_in_store("Eggs", False, "Fresh Foods")   """
 
 #Freshness of a product.
-def check_freshness(item_name, days_since_purchase):
+""" def check_freshness(item_name, days_since_purchase):
     if days_since_purchase < 3:
         return f"{item_name} is fresh."
     else:
@@ -726,22 +726,22 @@ def check_freshness(item_name, days_since_purchase):
 
 message = check_freshness("Lettuce", 2)
 print(message)      
-print(check_freshness("Tomatoes", 7)) 
+print(check_freshness("Tomatoes", 7))  """
 
 # Practice Exercises
 # Grocery Item Search
 
 
-def find_item(item_name, is_available):
+""" def find_item(item_name, is_available):
     if is_available:
         print(f"{item_name} is available.")
     else:
-        print(f"{item_name} is not available.")
+        print(f"{item_name} is not available.") """
 
-day-5-functions-and-modules
+""" day-5-functions-and-modules
 find_item("Orange Juice", True)    
-find_item("Bread", False)  
-=======
+find_item("Bread", False)  """ 
+
 # Day 5 -- Functions and Modules
 """ def my_first_function():
     print("This is a function")
@@ -783,38 +783,37 @@ show_sum() """
 
 # Parameters and Return Functions
 # Parameters
-
+""" 
 grocery_list_a = [{"name": "pasta", "cost":2.00, "amount": 2},
                 {"name": "onion", "cost":1.99, "amount": 1},
                 {"name": "stewed_tomatoes", "cost":1.35, "amount": 1}
 ]
-
-grocery_list_b = [
+"""
+""" grocery_list_b = [
     {"name": "bread", "cost": 3.75, "amount": 1},
     {"name": "milk", "cost": 6.50, "amount": 1,},
     {"name": "strawberries", "cost": 10.25, "amount": 1}
-]
-def calculate_total_cost(grocery_list, round_cost):
-    total_cost = 0
+] """
+""" def calculate_total_cost(grocery_list, round_cost):
+    total_cost = 0 """
 
-    for item in grocery_list:
+""" for item in grocery_list:
         cost = item["amount"] * item["cost"]
         total_cost += cost
+"""
+""" if round_cost:
+        total_cost = round(total_cost) """
         
-    if round_cost:
-        total_cost = round(total_cost)
-        
-    # print(f"The total cost is ${total_cost}")
-    return total_cost
+    # print(f"The total cost is ${total_cost}")""" return total_cost """
 
     
-grocery_list_a_cost = calculate_total_cost(grocery_list = grocery_list_a, round_cost = True)
+""" grocery_list_a_cost = calculate_total_cost(grocery_list = grocery_list_a, round_cost = True)
 grocery_list_b_cost = calculate_total_cost(grocery_list = grocery_list_b, round_cost = True)
-
-print(f"This is the value of grocery list a ${grocery_list_a_cost}")
+"""
+""" print(f"This is the value of grocery list a ${grocery_list_a_cost}")
 print(f"This is the value of grocery list b ${grocery_list_b_cost}")
 combined_value = grocery_list_a_cost + grocery_list_b_cost
-print(f"The total value of list a and list b is :{combined_value}")
+print(f"The total value of list a and list b is :{combined_value}") """
     
 
 
@@ -822,43 +821,43 @@ print(f"The total value of list a and list b is :{combined_value}")
 
 
 # Favorite Snack 
-def favorite_snack(snack_name, quantity_left):
+""" def favorite_snack(snack_name, quantity_left):
     if quantity_left:
         return(f"You have some {snack_name} left to enjoy")
     else:
         return(f"You're out of {snack_name}.")
         
 print(favorite_snack("Chips", 3))   
-print(favorite_snack("Cookies", 0))       
+print(favorite_snack("Cookies", 0))  """      
 
-def item_location(item_name, store_section):
+""" def item_location(item_name, store_section):
     if store_section:
         return(f"Find {item_name} in the {store_section}.")
     else:
-        return(f"Find {item_name} in the {store_section}.")
+        return(f"Find {item_name} in the {store_section}.") """
     
-print(item_location("Milk", "Dairy Aisle"))
-print(item_location("Apples", "Produce Section")) 
+""" print(item_location("Milk", "Dairy Aisle"))
+print(item_location("Apples", "Produce Section"))  """
 
 # Scope Of Variables
 
 #message = "I love chocolate!" # Global
-def chocolate():
+""" def chocolate():
     message = "I love chocolate!" # Local
-    print(message)
+    print(message) """
 
 # test inside a function
-chocolate()
+""" chocolate() """
 #I love chocolate!  # output
 
 # test outside a function
-print(message)
+""" print(message) """
 #I love chocolate!  # output """
 
 # LifeTime of Variables
-def greet():
+""" def greet():
     name = "Skyler"
-    print(f"Hello, {name}!")
+    print(f"Hello, {name}!") """
 
 # test inside a function
 #greet()
@@ -870,16 +869,16 @@ def greet():
 
 # Practice Exercises--Scope
 
-food = "Pasta"
+""" food = "Pasta"
 def favorite_food():
     food = "Soup"
-    print("Local Food", food) # local var
+    print("Local Food", food) # local var """
 
-favorite_food()
-print("Global food:", food) # global var """
+""" favorite_food()
+print("Global food:", food) # global var """ 
     
     
-def counter():
+""" def counter():
     count = 0
     count += 1
     print("Count", count)
@@ -887,34 +886,34 @@ def counter():
 counter()
 counter()
     
-user_name = "Mike"   # Global variable
+user_name = "Mike" """   # Global variable
 
-def change_name():
+""" def change_name():
     user_name = "Tommy"  # Local variable
-    print("Inside function:", user_name)
+    print("Inside function:", user_name) """
 
-change_name()                         # Prints: Inside function: 
-print("Outside function:", user_name) # Prints: Outside function:  """
+""" change_name()                         # Prints: Inside function: 
+print("Outside function:", user_name) """ # Prints: Outside function:  """
 
 # Modules--
 # Create and Import Modules
-import math # Built in Module
-print(math.sqrt(16))
+""" import math # Built in Module
+print(math.sqrt(16)) """
 
-import random
+""" import random
 print(random.randint(1, 10))  # Prints a random number between 1 and 10 """
 
-from math import pi, sqrt
+""" from math import pi, sqrt
 
 print(pi)
 3.141592653589793   # output
 
 print(sqrt(25))
-5.0   # output
+5.0   """ # output
 
-import numpy as np
+""" import numpy as np
 array = np.array([1, 2, 3])  # we use alias np instead of numpy
-print(array)
+print(array) """
 #[1 2 3]   output 
 
 # Creating and Importing Modules
@@ -922,8 +921,8 @@ print(array)
 
 
 # Step 1: Create a file called greetings.py with the following content:
-def say_hello(name):
-    return f"Hello, {name}!"
+""" def say_hello(name):
+    return f"Hello, {name}!" """
 
 # Step 2: Now, in another file, in the same directory, import and use the custom module:
 #import greetings
@@ -932,23 +931,23 @@ def say_hello(name):
 
 # How to import Modules
 # Import Entire Modules
-import random
-print((random.randint(1,20)))
+""" import random
+print((random.randint(1,20))) """
 
 
 #Import Special Functions or Variables
-from math import pi, sqrt
+""" from math import pi, sqrt """
 
-print(pi)
-3.141592653589793   # output
+""" print(pi)
+3.141592653589793 """   # output
 
-print(sqrt(25))
+""" print(sqrt(25)) """
 5.0   # output
 
 # Using Aliases
-import numpy 
+""" import numpy 
 array = numpy.array([1, 2, 3])  # we use alias np instead of numpy
-print(array)
+print(array) """
 #[1 2 3]   # output
 
 # Creating and Importing Modules
@@ -957,8 +956,8 @@ print(array)
 #Creating Module A:
 #Step 1: Create a new file called module_a.py. 
 #Write a simple function inside module_a.py named ‘welcome’:
-def welcome():
-    print("Welcome to Module A!")
+""" def welcome():
+    print("Welcome to Module A!") """
     
 # Special Module Concepts
 #c See Example in example.py file>>>
@@ -970,8 +969,268 @@ def welcome():
 # Exercise 2: Import Specific Functions
 #From the datetime module, import the date class and print today’s date.
 
-from datetime import date
-print(date.today())
+""" from datetime import date
+print(date.today()) """
+
+
+# Day 6 Naming Conventions
+#Exercise 1: Naming Conventions
+#Fix the naming in this code snippet and rewrite using proper naming conventions.
+""" def CalculateSum(a, b):
+    total_sum = a + b
+    return total_sum """
+
+#Exercise 2: Whitespace
+# Add the correct whitespace to this code.
+""" result = (a + b) * (c - d)
+my_list = [1, 2, 3]
+print( result ) """
+
+
+# In Line Comments
+# Write inline comments explaining why each step is performed 
+# in the following code:
+""" def separate_fruits_and_veggies(items): # defining the function
+    fruits = [] # creating an empty list
+    veggies = []
+    for item in items: # Looping over each item in the list
+        name, category = item
+        if category == 'fruit':
+            fruits.append(name) # if category is equal to fruit, 
+                                # item gets add to list
+        else:
+            veggies.append(name)
+    return fruits, veggies """
+
+# Organization and Modularity
+# Practice Exercises
+# Practice Code:
+# def make_taco():
+#     # Choose the taco type
+#     taco_type = input("What kind of taco are you making? (e.g., Chicken, Beef, Veggie): ")
+    
+#     # Gather ingredients
+# def gather_ingredients():
+#     ingredients = []
+#     while True:
+#         ingredient = input("Enter an ingredient (or 'done' to stop): ")
+#         if ingredient.lower() == 'done':
+#             break
+#         ingredients.append(ingredient) 
+    
+#     # Assemble and display the taco
+# def assembly():
+#     print(f"\nAssembling your {taco_type} taco with the following ingredients:")
+#     for ingredient in ingredients:
+#         print(f"- {ingredient}")
+#     print(f"\nYour {taco_type} taco is ready! Enjoy!") 
+    
+# def format_ingredient(ingredient):
+#     new_ingredient = f"- {ingredient}"
+#     return new_ingredient
+
+# make_taco()
+
+# Exercise 1: Break Down the Function (SRP)
+# Refactor the make_taco function into three smaller functions:
+# A function to choose the taco type.
+# A function to gather ingredients.
+# A function to assemble and display the taco.
+
+# Suggested tasks:
+# A function for adding items to the list.
+# A function for calculating the total cost.
+# A function for printing the grocery list and total cost.
+
+
+# Error Handling
+# Look Before You Leap(LBYL)
+# When to Use LBYL:
+# When pre-checking is quick and straightforward.
+# To prevent predictable errors like accessing an item in 
+# a grocery list dictionary that might not exist.
+
+# Example:
+
+
+# LBYL approach
+# grocery_list = {"bread": 4.50, "cheese": 12.47, "yogurt": 3.99}
+
+
+# Get the value of butter
+
+# if "butter" in grocery_list:
+#     butter_value = grocery_list["butter"]
+#     print(butter_value)
+# else:
+#     print("Butter does not exist.") 
+    
+    
+# EAFP
+# try:
+#     butter_value = grocery_list["butter"]
+#     print(butter_value)
+# except KeyError:
+#     print("BUtter does not exist.")
+    
+    
+# for key, value in grocery_list.items():
+#     print(key)
+#     print(value)
+
+# Multi-Line Doc Strings
+
+#  Exercise 1: Multi-Line String
+# Write three things about yourself in a string variable called about_me.
+# Copy the variable and break it into three lines using parenthesis
+# Copy the variable and break it into three lines using triple quotes
+# Both outputs should look the same
+# Example:
+# "I work in QA, I love hiking, and I have a pet cat."
+# about_me = ("I like to train. " 
+#            "I Like the outdoors. "
+#             "I like my cars. ")
+# print(about_me)
+
+# about_me  = """
+# I Like to train. I like the outdoors. I like my cars.
+# """
+# print(about_me)
+
+# Exercise 2: Multi-Line Function Call
+# The following function call is too long and does not comply with PEP 8 guidelines because of its length. 
+# Rewrite it by placing each parameter on a new line.
+
+# add_bee_hive = (
+#     beekeeper_name = "Alice", 
+#     location = "North Field", 
+#     hive_capacity = 50, 
+#     bee_species = "Apis mellifera", 
+#     honey_production_rate = 20.5, 
+#     hive_health = "Good", 
+#     queen_present = True, 
+#     last_inspection = "2024-11-20", 
+#     notes = "Hive thriving with high activity"
+# )
+
+#Exercise 3: Multi-Line Data Structures
+# You are given a dictionary with 10 stores and their inventory numbers written as a single line.
+# Rewrite it so each store and its inventory count is on a new line for better readability.
+# stores = {
+#     "Store A": 120, 
+#     "Store B": 340, 
+#     "Store C": 275,
+#     "Store D": 420, 
+#     "Store E": 310, 
+#     "Store F": 95, 
+#     "Store G": 240, 
+#     "Store H": 180, 
+#     "Store I": 60, 
+#     "Store J": 410
+# }
+# print(stores)
+
+# Global variables and Constants
+# Pass Variables as Arguments
+# Instead of relying on global variables, pass the required values directly to functions.
+
+# Example:
+# def multiply_by_two(num):
+#     return num * 2
+
+# # Instead of number being a global variable
+# # We assign it here
+# number = 10
+# result = multiply_by_two(number)
+# print(result)  # Output: 20
+
+# Encapsulate Variables in Functions or Classes
+# Keep variables local to their specific function or class to limit their scope.
+
+# Example
+# def calculate_area(length, width):
+#     area = length * width  # 'area' is local to this function
+#     return area
+
+# length = 5
+# width = 10
+# result = calculate_area(length, width)
+# print(result)  # Output: 50
+
+# Constants
+# Constants are variables that should not change throughout the program. 
+# Python uses a naming convention of ALL_CAPS to identify constants.
+# Benefits:
+# Enhances code readability.
+# Makes updates easier (change in one place updates all references).
+# Reduces hardcoding and duplication.
+
+# Example
+# MAX_CONNECTIONS = 5 # ALL CAPS shows the reader these values will not change
+# TIMEOUT_DURATION = 30
+
+# def connect():
+#     for i in range(MAX_CONNECTIONS):
+#         print("Connecting...")
+
+# Type Hints and Function Annotations
+# Practice Exercises
+# Exercise 1: Add Type Hints to a Function
+# Update the following function to include type hints 
+# for the parameters and the return value.
+# Hint: The parameter name should be a string, and 
+# the function should return a string.
+
+# Function
+# def apples(apple_type: str):
+#     return f"I love, {apple_type} apples!"
+# print("I like apples")
+
+# apples("red")
+
+# Exercise 2: Use Type Hints for Variables
+# Rewrite the code below to include type hints for the variables.
+# Hint: Use str for title, int for years_experience, and bool for is_remote.
+
+# Variables
+# title: str = "Python Developer"
+# years_experience: int = 10
+# is_remote: bool = True
+
+# Exercise 3: Annotate a Math Function
+# Add type hints to this function, which calculates 
+# the area of a rectangle.
+# Hint: length and width should be float, and the return value
+# should also be float.
+
+# Function
+# def calculate_area(length: = float, width: = float):
+#     return  length:= float * width
+
+# Collaboration, Version Control and Code Style Consistency
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+    
+
+
+
+
+
+
 
 
 

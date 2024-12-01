@@ -1,5 +1,7 @@
 import mkl_core
 
+print("Welcome to your Grocery Shopping List!")
+
 def launch():
     
     while True:
@@ -43,7 +45,8 @@ def launch():
 
         if command == "quit":
             break
-# Inputs Function      
+# Inputs Functions
+
 def get_inputs():
     while True:
         name = input("item name: ")
@@ -144,6 +147,7 @@ def get_inputs():
             
 
     return name, store, cost, amount, priority, buy, date, category
+
 # Call the function
 if __name__ == "__main__":
     launch()
