@@ -2,54 +2,69 @@ import mkl_core
 
 print("Welcome to your Grocery Shopping List!")
 
+
 def launch():
-    
+
     while True:
-        command = """input("Enter a command (add, remove, edit, 
-        list, export, quit): ")"""
-        
-        if command =="add":
-            print("This is the the command to add items to the list. ex. item name: 'Bread'")
-            
+        command = input("Enter a command"
+                        "(add, remove, edit, list, export, quit): ")
+
+        if command == "add":
+            print(
+                "This is the the command to add items"
+                "to the list. ex. item name: 'Bread'")
+
         if command == "add":
             name, store, cost, amount, priority, buy, date, category = get_inputs()
-            mkl_core.add_item(name=name, store=store, cost=cost, 
-    amount=amount, priority=priority, buy=buy, date=date, category = category)
-            
-        if command =="remove":
+            mkl_core.add_item(
+                name=name,
+                store=store,
+                cost=cost,
+                amount=amount,
+                priority=priority,
+                buy=buy,
+                date=date,
+                category=category,
+            )
+
+        if command == "remove":
             print("This is the the command to remove items from the list.")
-            
+
         if command == "remove":
             name = input("Item name to remove: ")
             mkl_core.remove_item(name)
-            
-        if command =="edit":
-            print("This is the the command to edit items from the list.")    
 
         if command == "edit":
-            name, store, cost, amount, priority, buy, date, 
-            category = get_inputs()
-            mkl_core.edit_item(name, store, cost, amount, priority, 
-            buy, date, category)
+            print("This is the the command to edit items from the list.")
 
-        if command =="list":
-            print("This is the the command to list all the items in the list.")  
-            
+        if command == "edit":
+            name, store, cost, amount, priority, buy, date,
+            category = get_inputs()
+            mkl_core.edit_item(name, store, cost, 
+                                amount, priority, buy, date, category)
+
+        if command == "list":
+            print("This is the the command to list all the items in the list.")
+
         if command == "list":
             mkl_core.list_items()
 
-        if command =="list":
-            print("This is the the command to export all the items in the list.")  
-            
+        if command == "list":
+            print("This is the the command"
+                  "to export all the items in the list.")
+
         if command == "export":
             mkl_core.export_items()
-        
-        if command =="quit":
-            print("This is the the command to quit the program.")  
+
+        if command == "quit":
+            print("This is the the command to quit the program.")
 
         if command == "quit":
             break
+
+
 # Inputs Functions
+
 
 def get_inputs():
     while True:
@@ -110,7 +125,7 @@ def get_inputs():
     while True:
         try:
             buy = input("Buy: ")
-            if buy.lower() =="true":
+            if buy.lower() == "true":
                 buy = True
                 break
             elif buy.lower() == "false":
@@ -123,9 +138,9 @@ def get_inputs():
                 print("Invalid input. Please enter true or false")
         except ValueError:
             print("Invalid input. Please enter 'true' or 'false'")
-            
-#Added expiration_date/ category
-        
+
+    # Added expiration_date/ category
+
     while True:
         try:
             date = input("Date: ")
@@ -138,7 +153,7 @@ def get_inputs():
             print("Invalid input. Please enter a date.")
         except ValueError:
             print("Invalid input. Please enter a date.")
-            
+
     while True:
         category = input("Category: ")
         if category == "skip":
@@ -148,11 +163,10 @@ def get_inputs():
             category = category
             break
         print("Invalid input. Please add a valid category.")
-            
 
     return name, store, cost, amount, priority, buy, date, category
+
 
 # Call the function
 if __name__ == "__main__":
     launch()
-
