@@ -5,14 +5,16 @@ print("Welcome to your Grocery Shopping List!")
 def launch():
     
     while True:
-        command = input("Enter a command (add, remove, edit, list, export, quit): ")
+        command = """input("Enter a command (add, remove, edit, 
+        list, export, quit): ")"""
         
         if command =="add":
             print("This is the the command to add items to the list. ex. item name: 'Bread'")
             
         if command == "add":
             name, store, cost, amount, priority, buy, date, category = get_inputs()
-            mkl_core.add_item(name=name, store=store, cost=cost, amount=amount, priority=priority, buy=buy, date=date, category = category)
+            mkl_core.add_item(name=name, store=store, cost=cost, 
+    amount=amount, priority=priority, buy=buy, date=date, category = category)
             
         if command =="remove":
             print("This is the the command to remove items from the list.")
@@ -25,8 +27,10 @@ def launch():
             print("This is the the command to edit items from the list.")    
 
         if command == "edit":
-            name, store, cost, amount, priority, buy, date, category = get_inputs()
-            mkl_core.edit_item(name, store, cost, amount, priority, buy, date, category)
+            name, store, cost, amount, priority, buy, date, 
+            category = get_inputs()
+            mkl_core.edit_item(name, store, cost, amount, priority, 
+            buy, date, category)
 
         if command =="list":
             print("This is the the command to list all the items in the list.")  
