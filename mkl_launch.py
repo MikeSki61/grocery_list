@@ -23,9 +23,7 @@ def launch():
                         "(add, remove, edit, list, export, quit): ")
 
         if command == "add": # This will allow the user to add items.
-            print(
-                "This is the the command to add items"
-                "to the list. ex. item name: 'Bread'")
+            print(" Please enter an item to add to the list: ")
 
         if command == "add": # This command inputs all the items to add to the ist.
             name, store, cost, amount, priority, buy, date, category = get_inputs()
@@ -39,27 +37,25 @@ def launch():
                 date=date,
                 category=category,
             )
+            
+        
 
-        # if command == "remove": # This command will remove items.
-        #     print("This is the the command to remove items from the list.")
-
-        if command == "remove":
+        if command == "remove": # his is the command to remove an item.
             name = input("Item name to remove: ")
             mkl_core.remove_item(name)
 
         if command == "edit": # This is the command to be used to edit
             #items in the list.
-            print("This is the the command to edit items from the list.")
+            print("Please enter item to edit: ")
 
         if command == "edit": #This command allows the user
             #to edit and keyword or value within the list.
-            name, store, cost, amount, priority, buy, date,
-            category = get_inputs()
+            name, store, cost, amount, priority, buy, date, category = get_inputs()
             mkl_core.edit_item(name, store, cost, 
                                 amount, priority, buy, date, category)
 
         if command == "list":
-            print("This is the the command to list all the items in the list.")
+            print("List of grocery items: ")
 
         if command == "list":# This command will list the items 
             #selected in the list from the core module.
@@ -69,23 +65,21 @@ def launch():
             mkl_core.export_items()
 
         if command == "quit":
-            print("This is the the command to quit the program.")
+            print("This is to quit the program.")
 
         if command == "quit":
             break
 
-
 # Inputs Functions
-"""
-The following functions are for the inputs 
+def get_inputs(): 
+    """The following functions are for the inputs 
 to collect information for the list.
 
-"""
-
-def get_inputs(): 
-    while True:# this input will alert the user that 
-    #there is no valid entry if the option is skipped.
-        name = input("item name: ")
+    Returns:
+        string:  item to be added as a string
+    """    
+    while True:
+        name = input("Name of tem to add: ")
         if name:
             break
         print("Invalid input. Please enter a valid item")
@@ -104,7 +98,7 @@ def get_inputs():
     while True:# this input will alert the user that 
     #there is no valid entry if the option is skipped.
         try:
-            cost = input("item price: ")
+            cost = input("Price of item: ")
             if cost == "skip":
                 cost = None
                 break
@@ -132,7 +126,7 @@ def get_inputs():
     while True:# this input will alert the user that 
     #there is no valid entry if the option is skipped.
         try:
-            priority = input("Priority: ")
+            priority = input("Priority: 1 - 5 of importance:  ")
             if priority == "skip":
                 priority = None
                 break
@@ -146,7 +140,7 @@ def get_inputs():
     while True: # this input will alert the user that 
     #there is no valid entry if the option is skipped.
         try:
-            buy = input("Buy: ")
+            buy = input("Buy item, enter true or false: ")
             if buy.lower() == "true":
                 buy = True
                 break
@@ -162,24 +156,22 @@ def get_inputs():
             print("Invalid input. Please enter 'true' or 'false'")
 
     # Added expiration_date/ category
-
-    while True: # this input will alert the user that 
+    # while True: # this input will alert the user that 
     #there is no valid entry if the option is skipped.
         try:
             date = input("Date: ")
             if date == "skip":
-                date = None
+                date = "skip"
                 break
             elif date:
                 date = date
                 break
-            print("Invalid input. Please enter a date.")
         except ValueError:
             print("Invalid input. Please enter a date.")
 
     while True: # this input will alert the user that 
     #there is no valid entry if the option is skipped.
-        category = input("Category: ")
+        category = input("Category to place item in: ")
         if category == "skip":
             category = None
             break

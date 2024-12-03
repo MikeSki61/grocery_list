@@ -68,17 +68,23 @@ grocery_list: list[dict[str, float | int | bool | str]] = [
     },
 ]
 
-"""
-The add items() function is to be able to add new items to the 
-current grocery_list app.
-Any keyword and value can be added.
-The grocery_list.append() will add the item to the existing list.
-
-"""
-# Add items to the list
 def add_item(name: str, store: str, cost: float, 
             amount: int, priority: int, buy: bool, 
             date: str, category: str):
+    """This is a function to add the arguments 
+    for the addition of an item to the list.
+
+    Args:
+        name (str): a string
+        store (str): a string
+        cost (float): a float
+        amount (int): an integer
+        priority (int): an integer
+        buy (bool): a boolean
+        date (str): a string
+        category (str): a string
+    """    
+    
     item = {
         "name": name,
         "store": store,
@@ -91,25 +97,40 @@ def add_item(name: str, store: str, cost: float,
     }
     grocery_list.append(item)
 
-"""
-The remove_items() function will provide the user the ability 
-to remove any item from the list.
-The grocery_lst.pop() function will do that.
-"""
+
 # Remove items from the list
 def remove_item(name: str) -> str:
-    index = get_index_from_name(name)
+    """This is a function to remove items 
+        from the list as a string.
 
+    Args:
+        name (str): string
+
+    Returns:
+        str: _return item as a string
+    """    
+    
+    index = get_index_from_name(name)
+    
     grocery_list.pop(index)
 
-"""
-The edit_items() function allows the user to edit(change) any item 
-in the list.
-"""
+
 # Edit items
 def edit_item(name: str, store: str, cost: float, 
             amount: int, priority:int, buy: bool, 
             date: str, category: str):
+    """This is  function the allows the user to edit the items in a list.
+
+    Args:
+        name (str): _a string
+        store (str): _a string
+        cost (float): _ a float
+        amount (int): _an integer
+        priority (int): _an integer_
+        buy (bool): _a boolean
+        date (str): _a string
+        category (str): _a string
+    """    
     index = get_index_from_name(name)
 
     old_item = grocery_list[index]
@@ -148,14 +169,13 @@ def edit_item(name: str, store: str, cost: float,
 
     grocery_list[index] = item
 
-"""
-The export_items() function will export the items that may have
-been edited, removed or  added to the list, 
-creating a new list called the buy_list.
 
-"""
 def export_items():
     buy_list = []
+    """_The export_items() function will export the items that may have
+been edited, removed or  added to the list, 
+creating a new list called the buy_list.
+    """    
 
     for item in grocery_list: # Iterate over the grocery list.
         if item["buy"]:
@@ -174,38 +194,41 @@ def export_items():
 
         print(f"The total cost is ${total_cost: float}:")
 
-"""
-The get_index_from_name(name) function 
-will return the name of the item.
 
-"""
 def get_index_from_name(name):
     index = 0
+    """_The get_index_from_name(name) function 
+will return the name of the item.
+
+    Returns:
+        _name_: _will return a string
+    """    
 
     for item in grocery_list:
         if item["name"] == name: # If item is equal to name, returns the value.
             return index
         else:
             index += 1 # Adds the item increases the count by one.
-"""
-The list_items() function will list / print the items.
-"""
+            
 def list_items()-> str:
+    """The list_items() function will list / print the items.
+
+    Returns:
+        str: -items as a string
+    """    
     for item in grocery_list:
         print(item)
-""" 
-The calculate_total_cost() function will calculate the 
-total cost of the items in the list.
-By showing the name of the item as a string, then rounding the cost to 
-a whole dollar amount, and multiplying that by the tax rate, 
-which will give the total cost of each item.
-Then the cost with the tax of each item will be added 
-together giving the total cost of the list.
 
-"""
 
-def calculate_total_cost(grocery_list: str, round_cost=False, tax= 0.8):
+TAX = 0.8
+def calculate_total_cost(grocery_list: str, round_cost=False):
     total_cost = 0
+    """The calculate_total_cost() function will calculate the 
+total cost of the items in the list.
+
+    Returns:
+        float: will return item as a float
+    """    
     
     for item in grocery_list:
         cost = item["amount": int] * item["cost": float]
@@ -214,8 +237,8 @@ def calculate_total_cost(grocery_list: str, round_cost=False, tax= 0.8):
     if round_cost:
         total_cost = round(total_cost)
 
-    if tax:
-        tax_cost = total_cost * tax
+    if TAX:
+        tax_cost = total_cost * TAX
         total_cost += tax_cost
 
     return total_cost
