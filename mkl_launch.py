@@ -1,20 +1,33 @@
-import mkl_core
+"""
+mk_launch.py
+This file is the launch file that imports the functions for the app.
+It includes the ability to add, remove, edit, and export the list.
 
-print("Welcome to your Grocery Shopping List!")
+Functions are:
+-add_items(): Add items to the list.
+-remove_items(): Removes items from the list.
+-edit_items(): Edits any item within the list. Any value can be edited.
+-export_items(): Able to export the list.
+
+Author: Mike Kwiatkowsky
+Version:1.0.0
+"""
+
+import mkl_core
 
 
 def launch():
-
+    print("Welcome to your Grocery Shopping List!")
     while True:
         command = input("Enter a command"
                         "(add, remove, edit, list, export, quit): ")
 
-        if command == "add":
+        if command == "add": # This will allow the user to add items.
             print(
                 "This is the the command to add items"
                 "to the list. ex. item name: 'Bread'")
 
-        if command == "add":
+        if command == "add": # This command inputs all the items to add to the ist.
             name, store, cost, amount, priority, buy, date, category = get_inputs()
             mkl_core.add_item(
                 name=name,
@@ -27,17 +40,19 @@ def launch():
                 category=category,
             )
 
-        if command == "remove":
-            print("This is the the command to remove items from the list.")
+        # if command == "remove": # This command will remove items.
+        #     print("This is the the command to remove items from the list.")
 
         if command == "remove":
             name = input("Item name to remove: ")
             mkl_core.remove_item(name)
 
-        if command == "edit":
+        if command == "edit": # This is the command to be used to edit
+            #items in the list.
             print("This is the the command to edit items from the list.")
 
-        if command == "edit":
+        if command == "edit": #This command allows the user
+            #to edit and keyword or value within the list.
             name, store, cost, amount, priority, buy, date,
             category = get_inputs()
             mkl_core.edit_item(name, store, cost, 
@@ -46,12 +61,9 @@ def launch():
         if command == "list":
             print("This is the the command to list all the items in the list.")
 
-        if command == "list":
+        if command == "list":# This command will list the items 
+            #selected in the list from the core module.
             mkl_core.list_items()
-
-        if command == "list":
-            print("This is the the command"
-                  "to export all the items in the list.")
 
         if command == "export":
             mkl_core.export_items()
@@ -64,16 +76,22 @@ def launch():
 
 
 # Inputs Functions
+"""
+The following functions are for the inputs 
+to collect information for the list.
 
+"""
 
-def get_inputs():
-    while True:
+def get_inputs(): 
+    while True:# this input will alert the user that 
+    #there is no valid entry if the option is skipped.
         name = input("item name: ")
         if name:
             break
         print("Invalid input. Please enter a valid item")
 
-    while True:
+    while True:# this input will alert the user that 
+    #there is no valid entry if the option is skipped.
         store = input("Store name: ")
         if store == "skip":
             store = None
@@ -83,7 +101,8 @@ def get_inputs():
             break
         print("Invalid input. Please add a valid store name")
 
-    while True:
+    while True:# this input will alert the user that 
+    #there is no valid entry if the option is skipped.
         try:
             cost = input("item price: ")
             if cost == "skip":
@@ -95,7 +114,8 @@ def get_inputs():
         except ValueError:
             print("Invalid input. Please enter a valid price")
 
-    while True:
+    while True:# this input will alert the user that 
+    #there is no valid entry if the option is skipped.
         try:
             amount = input("Item quantity: ")
             if amount == "skip":
@@ -109,7 +129,8 @@ def get_inputs():
         except ValueError:
             print("Invalid input. Please enter a valid quantity")
 
-    while True:
+    while True:# this input will alert the user that 
+    #there is no valid entry if the option is skipped.
         try:
             priority = input("Priority: ")
             if priority == "skip":
@@ -122,7 +143,8 @@ def get_inputs():
         except ValueError:
             print("Invalid input. Please enter a number between 1 and 5")
 
-    while True:
+    while True: # this input will alert the user that 
+    #there is no valid entry if the option is skipped.
         try:
             buy = input("Buy: ")
             if buy.lower() == "true":
@@ -141,7 +163,8 @@ def get_inputs():
 
     # Added expiration_date/ category
 
-    while True:
+    while True: # this input will alert the user that 
+    #there is no valid entry if the option is skipped.
         try:
             date = input("Date: ")
             if date == "skip":
@@ -154,7 +177,8 @@ def get_inputs():
         except ValueError:
             print("Invalid input. Please enter a date.")
 
-    while True:
+    while True: # this input will alert the user that 
+    #there is no valid entry if the option is skipped.
         category = input("Category: ")
         if category == "skip":
             category = None
