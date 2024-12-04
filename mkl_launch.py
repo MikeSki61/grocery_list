@@ -35,10 +35,15 @@ def launch():
                 date=date,
                 category=category,
             )
-
+            
+            print(f"{name} added to list")
+            
         if command == "remove":  # his is the command to remove an item.
             name = input("Name of item to remove: ")
             mkl_core.remove_item(name)
+            
+            print(f"{name} removed from list.")
+            
 
         if command == "edit":  # This is the command to be used to edit
             # items in the list.
@@ -48,6 +53,9 @@ def launch():
             # to edit and keyword or value within the list.
             name, store, cost, amount, priority, buy, date, category = get_inputs()
             mkl_core.edit_item(name, store, cost, amount, priority, buy, date, category)
+            
+            print(f"{name} was edited.")
+            
 
         if command == "list":  # This command will list the items
             # selected in the list from the core module.
@@ -55,6 +63,7 @@ def launch():
 
         if command == "export":
             mkl_core.export_items()
+            
 
         if command == "quit":
             break
