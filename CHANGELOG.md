@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.8.0] -2024-12-4
+### Added
+- Day 6 project approved
+-resolved issues with PEP 8 standards.
+_ added dcostrings to both files
+- added print statements to the add, remove and edit functions.
+- Both files are Version #1
+- tested app multiple times to ensure they are working correctly.
+
 ## [0.7.0] -2024-12-1
 ### Added
 -Day 6 completed code.
