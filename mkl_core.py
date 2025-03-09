@@ -238,7 +238,7 @@ def list_items() -> str:
 
 def search_item_name(search_item):
     matching_items = []
-    list = pattern.
+    
 
     for item in grocery_list:
         matching_items = rf"^{search_item}"
