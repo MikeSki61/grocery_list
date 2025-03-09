@@ -18,7 +18,7 @@ import mkl_core
 def launch():
     print("Welcome to your Grocery Shopping List!")
     while True:
-        command = input("Enter a command" "(add, remove, edit, list, export, quit): ")
+        command = input("Enter a command" "(add, remove, edit, list, export, search, quit): ")
 
         if command == "add":  # This will allow the user to add items.
             print(" Please enter an item to add to the list. ")
@@ -55,6 +55,10 @@ def launch():
             mkl_core.edit_item(name, store, cost, amount, priority, buy, date, category)
             
             print(f"{name} was edited.")
+
+        if command == "search":  # his is the command to remove an item.
+            item = input("Name of item to search for: ")
+            mkl_core.search_item_name(item)
             
 
         if command == "list":  # This command will list the items
