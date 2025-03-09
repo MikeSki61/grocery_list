@@ -64,7 +64,7 @@ def launch():
         if command == "export":
             mkl_core.export_items()
 
-        if command == "search":
+        if command == "search": #This command allows the user to search for an item.
             mkl_core.search_item()
             
         if command == "quit":

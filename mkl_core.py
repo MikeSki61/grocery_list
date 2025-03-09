@@ -238,10 +238,20 @@ def list_items() -> str:
 
 def search_item_name(search_item):
     matching_items = []
-    list = pattern.
+    item = rf"^{search_item}"
 
     for item in grocery_list:
-        matching_items = rf"^{search_item}"
+        matching_items =rf"^ (search_item)"
+        item = matching_items.append()
+        if item == search_item:
+            print("your item has been found")
+        else:
+            print("Item not found, please try again.")
+
+
+    
+
+
 
     
 
