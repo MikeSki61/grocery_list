@@ -63,8 +63,10 @@ def launch():
 
         if command == "export":
             mkl_core.export_items()
-            
 
+        if command == "search":
+            mkl_core.search_item()
+            
         if command == "quit":
             break
         print("You have quit the program.")

@@ -239,6 +239,8 @@ def list_items() -> str:
 def search_item_name(search_item):
     matching_items = []
     result = matching_items
+
+    
     
 
 # Define a global constant for the default tax rate
