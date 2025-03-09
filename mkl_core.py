@@ -12,7 +12,7 @@ Functions are:
 Author: Mike Kwiatkowsky
 Version:1.0.0
 """
-
+import re
 # The grocery_list is a list of items showing the keywords and values of each.
 # Also this shows the type of item within the list ex: "name" is a string,
 # cost is a float, priority is an integer and buy is a boolean.-True or False.
@@ -237,25 +237,18 @@ def list_items() -> str:
         print(item)
 
 def search_item_name(search_item):
-    matching_items = []
-    item = rf"^{search_item}"
-
+    # matching_items = []
+    # item = []
+    str = r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+'
+    result = re.match(search_item, str)   
     for item in grocery_list:
-        matching_items =rf"^ (search_item)"
-        item = matching_items.append()
-        if item == search_item:
-            print("your item has been found")
+        if result == re.match(search_item, str):
+            print("Your item has been found.")
         else:
             print("Item not found, please try again.")
 
 
-    
-
-
-
-    
-
-# Define a global constant for the default tax rate
+    # Define a global constant for the default tax rate
 TAX = 0.8
 
 
