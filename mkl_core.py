@@ -236,9 +236,9 @@ def list_items() -> str:
     for item in grocery_list:
         print(item)
 
-def search_item_name(search_item):
-    matching_items = []
-    result = matching_items
+# def search_item_name(search_item):
+#     matching_items = []
+#     result = matching_items
     
 
 # Define a global constant for the default tax rate
