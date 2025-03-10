@@ -236,16 +236,16 @@ def list_items() -> str:
     for item in grocery_list:
         print(item)
 
-def search_item_name(search_item):
-    # matching_items = []
-    # item = []
-    str = r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+'
-    result = re.match(search_item, str)   
-    for item in grocery_list:
-        if result == re.match(search_item, str):
-            print("Your item has been found.")
-        else:
-            print("Item not found, please try again.")
+    def search_item_name(search_item):
+        # matching_items = []
+        # item = []
+        str = r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+'
+        result = re.match(search_item, str)   
+        for item in grocery_list:
+            if result == re.match(search_item, str):
+                print("Your item has been found.")
+            else:
+                print("Item not found, please try again.")
 
 
     # Define a global constant for the default tax rate
