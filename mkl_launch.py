@@ -68,14 +68,30 @@ def launch():
         if command == "export":
             mkl_core.export_items()
             
-        if command == "search": #This command allows the user to search for an item.
-            mkl_core.search_item()
         
         if command == "quit":
             break
         print("You have quit the program.")
 
+
+
 # Inputs Functions
+
+def search_item():
+    """
+    Searches for items in the grocery list based on user input.
+    """
+    search_keyword = input("What is the name of the item you would like to search? ")
+    print("Searching for matching items...")
+    matches = mkl_core.search_item_name(search_keyword)
+
+    if matches:
+        print("These items match your search:")
+        for item in matches:
+            print(f"Name: {item['name']}, Store: {item['store']}, Cost: {item['cost']:.2f}")
+    else:
+        print("No items match the provided search keyword.")
+        
 def get_inputs():
     """The following functions are for the inputs
     to collect information for the list.
