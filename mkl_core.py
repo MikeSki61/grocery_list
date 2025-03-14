@@ -185,6 +185,15 @@ def edit_item(
 
     grocery_list[index] = item
 
+def search_item_name(search_item):
+    matching_items = []
+    pattern = rf"^{search_item}" 
+
+    for item in grocery_list:
+        if re.match(pattern, item["name"], re.IGNORECASE):
+            matching_items.append(item)
+
+    return matching_items
 
 def export_items():
     buy_list = []
@@ -236,15 +245,7 @@ def list_items() -> str:
     for item in grocery_list:
         print(item)
 
-def search_item_name(search_item):
-    matching_items = []
-    pattern = rf"^{search_item}" 
 
-    for item in grocery_list:
-        if re.match(pattern, item["name"], re.IGNORECASE):
-            matching_items.append(item)
-
-        return matching_items
         
 
     # Define a global constant for the default tax rate
