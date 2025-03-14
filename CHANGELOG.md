@@ -4,6 +4,9 @@
 ## [0.9.0] -2025-3-13
 ### Added
 - Day 7 Submitted for review
+- added search function to mkl_core.py 
+- enhanced search function in launch.py
+
 
 
 ## [0.8.0] -2024-12-4
