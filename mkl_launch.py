@@ -57,8 +57,9 @@ def launch():
             print(f"{name} was edited.")
 
         if command == "search":  # his is the command to remove an item.
-            item = input("Name of item to search for: ")
-            mkl_core.search_item_name(item)
+            # item = input("Name of item to search for: ")
+            # mkl_core.search_item_name(item)
+            search_item()
             
 
         if command == "list":  # This command will list the items
@@ -70,8 +71,9 @@ def launch():
             
         
         if command == "quit":
+            print("You have quit the program.")
             break
-        print("You have quit the program.")
+        
 
 
 
@@ -81,9 +83,9 @@ def search_item():
     """
     Searches for items in the grocery list based on user input.
     """
-    search_keyword = input("What is the name of the item you would like to search? ")
+    search_item = input("What is the name of the item you would like to search? ")
     print("Searching for matching items...")
-    matches = mkl_core.search_item_name(search_keyword)
+    matches = mkl_core.search_item_name(search_item)
 
     if matches:
         print("These items match your search:")
