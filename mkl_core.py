@@ -70,16 +70,17 @@ grocery_list: list[dict[str, float | int | bool | str]] = [
 ]
 
 
-def add_item(
-    name: str,
-    store: str,
-    cost: float,
-    amount: int,
-    priority: int,
-    buy: bool,
-    date: str,
-    category: str,
-):
+def add_item(name, store, cost, amount, priority, buy, date, category):
+        
+    # name: str,
+    # store: str,
+    # cost: float,
+    # amount: int,
+    # priority: int,
+    # buy: bool,
+    # date: str,
+    # category: str,
+
     """This is a function to add the arguments
     for the addition of an item to the list.
 
@@ -102,7 +103,7 @@ def add_item(
         "priority": priority,
         "buy": True,
         "date": date,
-        "category": category,
+        "category": category
     }
     grocery_list.append(item)
 
@@ -151,6 +152,9 @@ def edit_item(
 
     item = grocery_list[index]
 
+    if not name:
+        name = item["name"]
+
     if not store:
         store = item["store"]
 
@@ -186,6 +190,15 @@ def edit_item(
     grocery_list[index] = item
 
 def search_item_name(search_item):
+    """Search for items within the grocery list
+
+    Args:
+        search_item (_type_): _description_
+        name (str): _a string
+
+    Returns:
+       name (str): _a string
+    """
     matching_items = []
     pattern = rf"^{search_item}" 
 
@@ -212,7 +225,8 @@ creating a new list called the buy_list.
                 f"name: {item['name']} -store: {item['store']} -"
                 f"cost: ${item['cost']} -amount: {item['amount']} -"
                 f"priority: {item['priority']} -date: {item['date']} -"
-                f"category:{item['category']}"
+                f"catgory: {item['category']}"
+        
             )
 
         total_cost = calculate_total_cost(buy_list, round_cost=True, tax=TAX)
