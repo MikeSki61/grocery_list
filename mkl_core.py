@@ -71,8 +71,8 @@ grocery_list: list[dict[str, float | int | bool | str]] = [
 
 
 def add_item(name, store, cost, amount, priority, buy, date, category):
-"""
-This is a function to add the arguments
+
+    """This is a function to add the arguments
     for the addition of an item to the list.
 
     Args:

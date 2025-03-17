@@ -14,10 +14,9 @@ Version:1.0.0
 """
 import mkl_core
 
-#Prints welcome message for the app.
-print("Welcome to your Grocery Shopping List!")
 
 def launch():
+    print("Welcome to your Grocery Shopping List!")
     """
     Start of the shopping list program.
 
@@ -121,8 +120,8 @@ def edit_command():
                 amount,
                 priority,
                 buy,
-                date,
-                id=match_item["id"]
+                date
+            
             )
             print(f"Item '{match_item['name']}' has been updated.")
         else:
@@ -138,7 +137,7 @@ def edit_command():
             priority,
             buy,
             date,
-            category,
+            category
         
         )
         print(f"Item '{match_item['name']}' has been updated.")
@@ -176,24 +175,6 @@ def search_command():
     else:
         print("No items match the provided search keyword.")
 
-
-
-# Inputs Functions
-
-# def search_item():
-#     """
-#     Searches for items in the grocery list based on user input.
-#     """
-#     search_item = input("What is the name of the item you would like to search? ")
-#     print("Searching for matching items...")
-#     matches = mkl_core.search_item_name(search_item)
-
-#     if matches:
-#         print("These items match your search:")
-#         for item in matches:
-#             print(f"Name: {item['name']}, Store: {item['store']}, Cost: {item['cost']:.2f}")
-#     else:
-#         print("No items match the provided search keyword.")
         
 def get_inputs():
 
