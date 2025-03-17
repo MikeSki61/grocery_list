@@ -14,78 +14,160 @@ Version:1.0.0
 """
 import mkl_core
 
+#Prints welcome message for the app.
+print("Welcome to your Grocery Shopping List!")
 
 def launch():
-    print("Welcome to your Grocery Shopping List!")
+    """
+    Start of the shopping list program.
+
+    """
+    
     while True:
-        command = input("Enter a command" "(add, remove, edit, list, export, search, quit): ")
-
-        if command == "add":  # This will allow the user to add items.
-            print(" Please enter an item to add to the list. ")
-
-        if command == "add":  # This command inputs all the items to add to the ist.
-            name, store, cost, amount, priority, buy, date, category = get_inputs()
-            mkl_core.add_item(
-                name=name,
-                store=store,
-                cost=cost,
-                amount=amount,
-                priority=priority,
-                buy=buy,
-                date=date,
-                category=category,
-            )
-            
-            print(f"{name} added to list")
-            
-        if command == "remove":  # his is the command to remove an item.
-            name = input("Name of item to remove: ")
-            mkl_core.remove_item(name)
-            
-            print(f"{name} removed from list.")
-            
-
-        if command == "edit":  # This is the command to be used to edit
-            # items in the list.
-            print("Please enter item to edit: ")
-
-        if command == "edit":  # This command allows the user
-            # to edit and keyword or value within the list.
-            name, store, cost, amount, priority, buy, date, category = get_inputs()
-            mkl_core.edit_item(name, store, cost, amount, priority, buy, date, category)
-            
-            print(f"{name} was edited.")
-
-        if command == "search":  # his is the command to remove an item.
-            # item = input("Name of item to search for: ")
-            # mkl_core.search_item_name(item)
-            search_item()
-            
-
-        if command == "list":  # This command will list the items
-            # selected in the list from the core module.
-            mkl_core.list_items()
-
-        if command == "export":
-            mkl_core.export_items()
-            
+        command: str = input(
+            "Enter a command" "(add, remove, edit, list, export, search, quit): ").strip().lower()
         
-        if command == "quit":
-            print("You have quit the program.")
+        if command == "add":
+            add_command()
+        elif command == "remove":
+            remove_command()
+        elif command == "edit":
+            edit_command()
+        elif command == "list":
+            list_command()
+        elif command == "export":
+            export_command()
+        elif command == "search":
+            search_command()
+        elif command == "quit":
+            print("Exiting the program. Goodbye!")
             break
+        else:
+            print("Unknown command. Please try again.")
+
+
+def add_command():
+    """
+    Handles the logic triggered by the add command in command line mode.
+    Adds an item to the grocery list.
+
+    """
+    name, store, cost, amount, priority, buy, date, category = get_inputs()
+    mkl_core.add_item(
+        name=name, 
+        store=store,
+        cost=cost,
+        amount=amount,
+        priority=priority,
+        buy=buy,
+        date=date,
+        category=category
+       
+    )
+    print(f"{name} was added to the grocery list.")
+
+def remove_command():
+    """
+    Prompts the user for an item name, searches for matching items,
+    and allows the user to select an item to remove.
+
+    """
+    name = input("Enter name of item to remove: ")
+    matches = mkl_core.search_item_name(name)
+
+    if not matches:
+        print(f"There are no items with the name '{name}'.")
+        return
+
+    print("Multiple items found:")
+    for match_num, item in enumerate(matches, start=1):
+        print(f"Item {match_num}, Name: {item['name']}")
+
+    item_num = int(input("Enter the item number you want to remove (i.e. 1): "))
+    if 1 <= item_num <= len(matches):
+        item_to_remove = matches[item_num - 1] # get the selected item
+        mkl_core.remove_item(item_to_remove['name'])  # Remove by name
+        print(f"Item '{item_to_remove['name']}' has been removed.")
+    else:
+        print("Invalid item number.")
+
+
+def edit_command():
+    """
+    Prompts the user for an item name, searches for matching items,
+    and allows the user to select an item to edit.
+    """
+    target_item = input("Which item would you like to edit? ")
+    matches = mkl_core.search_item_name(target_item)
+
+    if not matches:
+        print(f"There are no items with the name '{target_item}'.")
+        return
+
+    if len(matches) > 1:
+        print("Multiple items found:")
+        for match_num, item in enumerate(matches, start=1):
+            print(f"Item {match_num}: ID: {item['id']}, Name: {item['name']}")
+
+        item_num = int(input("Enter the item number you want to "\
+                             "edit (i.e. 1): "))
+        if 1 <= item_num <= len(matches):
+            match_item = matches[item_num - 1]
+            name, store, cost, amount, priority, buy, date, category = get_inputs()
+            mkl_core.edit_item(
+                name,
+                store,
+                cost,
+                amount,
+                priority,
+                buy,
+                date,
+                id=match_item["id"]
+            )
+            print(f"Item '{match_item['name']}' has been updated.")
+        else:
+            print("Invalid item number.")
+    else:
+        match_item = matches[0]
+        name, store, cost, amount, priority, buy, date, category = get_inputs()
+        mkl_core.edit_item(
+            name,
+            store,
+            cost,
+            amount,
+            priority,
+            buy,
+            date,
+            category,
         
+        )
+        print(f"Item '{match_item['name']}' has been updated.")
 
 
+def list_command():
+    """
+    Lists all current items in the grocery list.
 
-# Inputs Functions
+    """
+    print("These are the current items in the grocery list:")
+    mkl_core.list_items()
 
-def search_item():
+
+def export_command():
+    """
+    Exports items marked for purchase in the grocery list.
+    """
+    print("These are the current items in the buy list:")
+    mkl_core.list_items()
+
+
+def search_command():
     """
     Searches for items in the grocery list based on user input.
     """
-    search_item = input("What is the name of the item you would like to search? ")
+    search_keyword = input("What is the name of the item you would like to search? ")
     print("Searching for matching items...")
-    matches = mkl_core.search_item_name(search_item)
+    matches = mkl_core.search_item_name(search_keyword)
 
     if matches:
         print("These items match your search:")
@@ -93,8 +175,28 @@ def search_item():
             print(f"Name: {item['name']}, Store: {item['store']}, Cost: {item['cost']:.2f}")
     else:
         print("No items match the provided search keyword.")
+
+
+
+# Inputs Functions
+
+# def search_item():
+#     """
+#     Searches for items in the grocery list based on user input.
+#     """
+#     search_item = input("What is the name of the item you would like to search? ")
+#     print("Searching for matching items...")
+#     matches = mkl_core.search_item_name(search_item)
+
+#     if matches:
+#         print("These items match your search:")
+#         for item in matches:
+#             print(f"Name: {item['name']}, Store: {item['store']}, Cost: {item['cost']:.2f}")
+#     else:
+#         print("No items match the provided search keyword.")
         
 def get_inputs():
+
     """The following functions are for the inputs
     to collect information for the list.
 
@@ -190,16 +292,17 @@ def get_inputs():
         except ValueError:
             print("Invalid input. Please enter a date.")
 
-    while True:  # this input will alert the user that
-        # there is no valid entry if the option is skipped.
-        category = input("Category to place item in: ")
-        if category == "skip":
-            category = None
+    while True: 
+        try:
+            category = input("Category to place item in: ")
+            if category == "skip":
+                category = None
+                break
+            elif category:
+                category = category
             break
-        elif category:
-            category = category
-            break
-        print("Invalid input. Please add a valid category.")
+        except ValueError:
+            print("Invalid input. Please add a valid category.")
 
     return name, store, cost, amount, priority, buy, date, category
 
